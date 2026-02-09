@@ -5,6 +5,7 @@ import VCard from './components/VCard';
 import Booking from './components/Booking';
 import ChatModule from './components/ChatModule';
 import PdfModule from './components/PdfModule';
+import UploadModule from './components/UploadModule';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route path="/chat" element={<ChatModule />} />
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
+          <Route path="/upload" element={<UploadModule />} />
         </Routes>
       </div>
     </HashRouter>
