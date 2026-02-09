@@ -3,20 +3,32 @@ import { ContactData, ServiceInfo } from './types';
 
 export const CONTACT_INFO: ContactData = {
   name: "Darshan N G",
-  role: "Pest Control & Bird Netting Specialist",
+  role: "Pest & Bird Protection Specialist",
   location: "Bengaluru, India",
-  phone: "+919000000000", // Placeholder
-  whatsapp: "919000000000", // Placeholder
-  email: "darshan@example.com",
-  bio: "Direct technician coordination. Fast response. Reliable pest & bird control solutions across Bengaluru."
+  phone: "+919876543210", // Placeholder
+  whatsapp: "919876543210", // Placeholder
+  email: "contact@darshanng.com",
+  bio: "Direct technician-to-client coordination. I eliminate pests and pigeons with surgical precision, focusing on safety and long-term prevention for Bengaluru homes."
 };
+
+export const TRUST_POINTS = [
+  { label: "Execution Specialist", icon: "🛠️", desc: "No sales agents. Deal directly with the execution expert." },
+  { label: "Rapid Dispatch", icon: "⚡", desc: "Prompt response across all zones of Bengaluru." },
+  { label: "Eco-Certified", icon: "🌿", desc: "Safe, low-toxicity chemicals for family and pets." }
+];
+
+export const PROCESS_STEPS = [
+  { title: "Smart Inspection", desc: "Detecting hidden colonies using moisture and heat signatures.", icon: "🔍" },
+  { title: "Targeted Treatment", icon: "🎯", desc: "Scientific application based on the specific biology of the pest." },
+  { title: "Seal & Protect", icon: "🛡️", desc: "Closing entry points and applying residual barriers." }
+];
 
 export const SERVICES: ServiceInfo[] = [
   {
     id: "termite",
-    title: "Termite Treatment Bengaluru",
+    title: "Advanced Termite Protection",
     slug: "termite-treatment-bengaluru",
-    description: "Anti-termite solutions for homes and commercial buildings in Bengaluru.",
+    description: "Anti-termite solutions for Bengaluru's high-value wooden interiors.",
     problem: "Termites (white ants) can silently destroy wooden furniture, door frames, and structural components. In Bengaluru's climate, they thrive year-round.",
     inspection: "I perform a thorough site inspection to identify termite galleries, mud tubes, and moisture points using thermal imaging and moisture meters.",
     method: "Advanced Drill-Fill-Seal technique. We use eco-friendly termiticides injected into 12mm holes spaced at 1-foot intervals along walls.",
@@ -30,9 +42,9 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "bird",
-    title: "Bird Netting Bengaluru",
+    title: "Premium Bird Netting",
     slug: "bird-netting-bengaluru",
-    description: "Professional pigeon and bird netting services for balconies and windows.",
+    description: "Surgical bird-proofing for balconies and high-rise apartments.",
     problem: "Pigeon droppings carry over 60 diseases and damage building aesthetics. Nests in balconies cause hygiene issues.",
     inspection: "Assessment of balcony area, duct spaces, and potential entry points for birds.",
     method: "High-density polyethylene (HDPE) netting (UV stabilized). We use stainless steel hooks or wire ropes for tensioning, ensuring the net is invisible from a distance.",
@@ -46,7 +58,7 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "cockroach",
-    title: "Cockroach Control Bengaluru",
+    title: "Kitchen Cockroach Control",
     slug: "cockroach-control-bengaluru",
     description: "Targeted gel and spray treatments for cockroach-free kitchens.",
     problem: "Cockroaches contaminate food and spread allergies. Common species in Bengaluru include German and American cockroaches.",
@@ -62,9 +74,9 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "rodent",
-    title: "Rodent Control Bengaluru",
+    title: "Integrated Rodent Control",
     slug: "rodent-control-bengaluru",
-    description: "Effective rat and mouse control for residential and commercial premises.",
+    description: "Effective rat and mouse control for urban residential and commercial premises.",
     problem: "Rats chew through electrical wires and spread diseases like Leptospirosis. Common in Bengaluru's bustling urban areas.",
     inspection: "Identifying runways, gnaw marks, and entry holes in the building perimeter.",
     method: "Integrated Pest Management (IPM) involving baiting stations, glue traps, and physical sealing of entry points.",
