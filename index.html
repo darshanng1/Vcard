@@ -47,10 +47,20 @@
         inset: 0;
       }
 
-      /* Pest Silhouettes Filters - Sterile & Corporate */
+      /* Subtle Industry Textures */
+      .termite-veins {
+        background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 50 50 100 10 T 190 10' stroke='rgba(16, 185, 129, 0.03)' fill='transparent'/%3E%3C/svg%3E");
+        opacity: 0.2;
+      }
+
+      .bird-net-grid {
+        background-image: linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+
       .silhouette {
-        filter: brightness(0) invert(0.2) opacity(0.12) blur(1.5px);
-        transition: opacity 1s ease;
+        filter: brightness(0) invert(0.2) opacity(0.1) blur(2px);
       }
 
       .text-heading { font-family: 'Space Grotesk', sans-serif; }
@@ -67,16 +77,16 @@
         width: 60%;
         height: 300%;
         background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
-        animation: light-sweep 10s infinite ease-in-out;
+        animation: light-sweep 12s infinite ease-in-out;
         pointer-events: none;
       }
       
       @keyframes breathe {
-        0%, 100% { transform: scale(1); opacity: 0.5; box-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
-        50% { transform: scale(1.08); opacity: 1; box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.05); opacity: 0.8; }
       }
       .breathe-glow {
-        animation: breathe 4s ease-in-out infinite;
+        animation: breathe 5s ease-in-out infinite;
       }
 
       .glass {
@@ -84,6 +94,26 @@
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
         border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      /* Premium Frame Styles */
+      .premium-frame {
+        position: relative;
+        padding: 4px;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), transparent, rgba(16, 185, 129, 0.2));
+        border-radius: 3.5rem;
+      }
+      .premium-frame::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: 3.6rem;
+        padding: 1px;
+        background: linear-gradient(to bottom right, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.1));
+        -webkit-mask: linear-gradient(%23fff 0 0) content-box, linear-gradient(%23fff 0 0);
+        mask: linear-gradient(%23fff 0 0) content-box, linear-gradient(%23fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
       }
 
       .magnetic-action {
@@ -95,18 +125,6 @@
       
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-      /* Specialized Protection Textures */
-      .bird-net-grid {
-        background-image: linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
-        background-size: 15px 15px;
-        opacity: 0.4;
-      }
-      .protection-glow {
-        filter: blur(8px);
-        background: rgba(16, 185, 129, 0.15);
-      }
     </style>
     <script type="importmap">
 {

@@ -8,97 +8,73 @@ const BackgroundExpertise: React.FC = () => {
     <div className="bg-layers overflow-hidden">
       <div className="mesh-gradient" />
       
-      {/* 🪳 SCENE 1: COCKROACH BAITING SYSTEM (Bottom Layer) */}
-      <div className="absolute bottom-[20%] left-[25%]">
-        {/* The Bait Dot */}
-        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/30 protection-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+      {/* 🛡️ Subtle Industry Textures */}
+      <div className="absolute inset-0 termite-veins" />
+      <div className="absolute top-0 left-0 w-full h-[30%] bird-net-grid opacity-30" />
+
+      {/* 🪳 SCENE 1: COCKROACH RISK AREA (Subtle Hint) */}
+      <div className="absolute bottom-[25%] left-[10%]">
         <motion.div 
-          className="silhouette text-4xl"
-          initial={{ x: -120, y: 10, opacity: 0, rotate: 10 }}
+          className="silhouette text-5xl"
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ 
-            x: [null, -40, -35], 
-            opacity: [0, 0.15, 0],
-            scale: [1, 1, 0.7]
+            opacity: [0, 0.1, 0.05, 0],
+            scale: [0.8, 1, 1.1, 1]
           }}
           transition={{ 
-            duration: 14, 
-            repeat: Infinity, 
-            times: [0, 0.6, 1],
-            ease: "linear",
-            delay: 1
+            duration: 10, 
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
         >
           🪳
         </motion.div>
       </div>
 
-      {/* 🐀 SCENE 2: RODENT STATION MONITORING (Mid Layer) */}
-      <div className="absolute top-[35%] right-[15%]">
-        {/* Rodent Station Outline */}
-        <div className="w-16 h-10 border border-emerald-500/10 rounded-sm bg-emerald-500/5 relative">
-          <div className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-2 h-4 bg-emerald-500/10 rounded-full" />
+      {/* 🐀 SCENE 2: RODENT ENTRY POINT (Strategic Pulse) */}
+      <div className="absolute top-[40%] right-[10%]">
+        <div className="w-16 h-10 border border-emerald-500/10 rounded-lg bg-emerald-500/5 relative">
+          <motion.div 
+            className="absolute -inset-1 border border-emerald-500/20 rounded-lg"
+            animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          />
         </div>
         <motion.div 
-          className="silhouette text-3xl absolute -right-20 top-2"
-          initial={{ x: 0, opacity: 0 }}
+          className="silhouette text-3xl absolute -right-8 -top-4"
           animate={{ 
-            x: [0, -75, -75], 
-            opacity: [0, 0.15, 0.05],
-            rotate: [0, 0, -5]
+            x: [0, -10, 0],
+            opacity: [0, 0.08, 0]
           }}
-          transition={{ 
-            duration: 16, 
-            repeat: Infinity, 
-            times: [0, 0.45, 1],
-            ease: "easeInOut",
-            delay: 5
-          }}
+          transition={{ duration: 15, repeat: Infinity }}
         >
           🐀
         </motion.div>
       </div>
 
-      {/* 🐦 SCENE 3: INVISIBLE BIRD NETTING (Upper Layer) */}
-      <div className="absolute top-[12%] left-[10%] w-[45%] h-[20%]">
-        <div className="w-full h-full bird-net-grid rounded-[2rem] border border-emerald-500/5" />
+      {/* 🐦 SCENE 3: BIRD PROTECTION OVERLAY (Top Section) */}
+      <div className="absolute top-[10%] left-[15%] w-[40%] h-[15%] border border-emerald-500/5 rounded-3xl bg-emerald-500/5 backdrop-blur-[2px]">
         <motion.div 
-          className="silhouette text-5xl absolute -bottom-20 -left-20"
-          initial={{ x: 0, y: 0, opacity: 0, rotate: -15 }}
+          className="silhouette text-6xl absolute -bottom-12 -left-12"
           animate={{ 
-            x: [0, 100, 80], 
-            y: [0, -80, -60],
-            opacity: [0, 0.15, 0],
-            scale: [0.8, 1, 0.9]
+            y: [0, -20, 0],
+            opacity: [0, 0.12, 0]
           }}
-          transition={{ 
-            duration: 18, 
-            repeat: Infinity, 
-            ease: "easeOut",
-            delay: 3
-          }}
+          transition={{ duration: 20, repeat: Infinity }}
         >
           🐦
         </motion.div>
       </div>
 
-      {/* 🦟 SCENE 4: FLYING INSECT CONTROL (Deep Layer) */}
-      <div className="absolute top-[65%] left-[60%]">
+      {/* 🧪 SCENE 4: STERILE PROTECTION PULSE (General Background) */}
+      <div className="absolute bottom-[10%] right-[20%]">
         <motion.div 
-          className="silhouette text-xl"
+          className="w-32 h-32 rounded-full border border-emerald-500/5 bg-emerald-500/5"
           animate={{ 
-            x: [0, 30, -30, 0], 
-            y: [0, -40, 40, 0],
-            opacity: [0.05, 0.15, 0.05]
+            scale: [0.8, 1.2, 0.8],
+            opacity: [0.05, 0.1, 0.05]
           }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        >
-          🦟
-        </motion.div>
-        {/* Neutralization Pulse */}
-        <motion.div 
-          className="w-24 h-24 rounded-full border border-emerald-500/10 absolute -left-10 -top-10"
-          animate={{ scale: [0.5, 1.5], opacity: [0, 0.1, 0] }}
-          transition={{ duration: 4, repeat: Infinity, delay: 2 }}
+          transition={{ duration: 6, repeat: Infinity }}
         />
       </div>
     </div>
@@ -120,7 +96,7 @@ const VCard: React.FC = () => {
 
   const primaryActions = [
     { label: "Direct Call", icon: "📞", link: `tel:${CONTACT_INFO.phone}`, type: 'ext', color: "bg-emerald-600 shadow-emerald-500/20" },
-    { label: "WhatsApp", icon: "💬", link: `https://wa.me/${CONTACT_INFO.whatsapp}?text=Hello%20Darshan,%20I'm%20inquiring%20about%20specialized%20hygiene%20infrastructure.`, type: 'ext', color: "bg-zinc-800 border-zinc-700/40" },
+    { label: "WhatsApp", icon: "💬", link: `https://wa.me/${CONTACT_INFO.whatsapp}?text=Hello%20Darshan,%20I'm%20inquiring%20about%20strategic%20hygiene%20infrastructure.`, type: 'ext', color: "bg-zinc-800 border-zinc-700/40" },
     { label: "Book Audit", icon: "📅", link: "/book", type: 'int', color: "bg-zinc-800 border-zinc-700/40" },
     { label: "Live Chat", icon: "🤖", link: "/chat", type: 'int', color: "bg-zinc-800 border-zinc-700/40" },
   ];
@@ -137,8 +113,8 @@ const VCard: React.FC = () => {
     <div className="flex-grow flex flex-col relative overflow-hidden">
       <BackgroundExpertise />
       
-      {/* IDENTITY HERO SECTION */}
-      <section className="relative h-[44%] flex flex-col items-center justify-center px-8 pt-8">
+      {/* IDENTITY HERO SECTION (Option B: Darshan's Professional Portrait) */}
+      <section className="relative h-[48%] flex flex-col items-center justify-center px-8 pt-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -147,25 +123,29 @@ const VCard: React.FC = () => {
         >
           {/* Executive Branding Header */}
           <div className="absolute top-0 left-0 p-6 flex items-center space-x-3 opacity-60">
-            <div className="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
+            <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
                <span className="text-white text-[10px] font-black leading-none">SIPC</span>
             </div>
             <div className="h-4 w-[1px] bg-zinc-800" />
-            <span className="text-[8px] font-black uppercase tracking-[0.4em] text-zinc-600">Established Excellence</span>
+            <span className="text-[8px] font-black uppercase tracking-[0.4em] text-zinc-600">Enterprise Grade</span>
           </div>
 
-          {/* Profile Focus with Gradient Aura */}
+          {/* Premium Framed Professional Portrait */}
           <div className="relative group mb-8">
-            <div className="absolute -inset-6 bg-emerald-500/10 rounded-[3.5rem] blur-3xl opacity-60 breathe-glow" />
+            <div className="absolute -inset-10 bg-emerald-500/10 rounded-full blur-3xl opacity-60 breathe-glow" />
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="relative w-36 h-36 rounded-[3rem] glass p-2 border-emerald-500/20 shadow-2xl overflow-hidden"
+              className="premium-frame shadow-2xl"
             >
-              <img 
-                src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${CONTACT_INFO.name}&backgroundColor=059669`} 
-                alt={CONTACT_INFO.name} 
-                className="w-full h-full rounded-[2.6rem] object-cover grayscale brightness-110 contrast-125"
-              />
+              <div className="w-40 h-40 rounded-[3.2rem] glass p-1.5 overflow-hidden border-emerald-500/20">
+                <img 
+                  src={`https://api.dicebear.com/7.x/avataaars/svg?seed=Darshan&backgroundColor=059669`} 
+                  alt={CONTACT_INFO.name} 
+                  className="w-full h-full rounded-[2.8rem] object-cover grayscale brightness-110 contrast-125"
+                />
+                {/* Subtle Overlay to imply "Executive" look if it were a real photo */}
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/20 to-transparent pointer-events-none" />
+              </div>
             </motion.div>
           </div>
 
@@ -177,8 +157,8 @@ const VCard: React.FC = () => {
             <div className="text-[10px] font-black uppercase tracking-[0.6em] text-emerald-500 mb-2 glow-text">
               {CONTACT_INFO.role}
             </div>
-            <div className="text-[9px] font-bold text-zinc-700 uppercase tracking-[0.4em] leading-none max-w-[200px] mx-auto">
-              Strategic Hygiene Infrastructure Oversight
+            <div className="text-[9px] font-bold text-zinc-700 uppercase tracking-[0.4em] leading-none max-w-[220px] mx-auto">
+              Strategic Oversight: Termite, Bird, Cockroach & Rodent Mitigation
             </div>
           </div>
         </motion.div>
@@ -191,7 +171,7 @@ const VCard: React.FC = () => {
         <div className="flex justify-center mb-10">
           <div className="inline-flex items-center px-6 py-2.5 rounded-full bg-emerald-500/5 border border-emerald-500/10">
             <div className="w-2 h-2 rounded-full bg-emerald-500 mr-3 breathe-glow shadow-emerald-500/50 shadow-lg" />
-            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-emerald-500/80">Executive Line Secure</span>
+            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-emerald-500/80">Corporate Line Authenticated</span>
           </div>
         </div>
 
