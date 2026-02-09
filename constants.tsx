@@ -1,90 +1,107 @@
 
-import { ContactData, ServiceInfo } from './types';
+import { ContactData, ServiceInfo, BlogPost } from './types';
 
 export const CONTACT_INFO: ContactData = {
   name: "Darshan N G",
-  role: "Pest & Bird Protection Specialist",
+  role: "Business Specialist • Pest & Bird Control",
   location: "Bengaluru, India",
-  phone: "+919876543210", // Placeholder
-  whatsapp: "919876543210", // Placeholder
-  email: "contact@darshanng.com",
-  bio: "Direct technician-to-client coordination. I eliminate pests and pigeons with surgical precision, focusing on safety and long-term prevention for Bengaluru homes."
+  phone: "+919876543210",
+  whatsapp: "919876543210",
+  email: "specialist@darshanng.com",
+  bio: "The single point of responsibility for your property's protection. I combine technical expertise with business accountability to ensure fast, permanent, and safe pest elimination."
 };
 
 export const TRUST_POINTS = [
-  { label: "Execution Specialist", icon: "🛠️", desc: "No sales agents. Deal directly with the execution expert." },
-  { label: "Rapid Dispatch", icon: "⚡", desc: "Prompt response across all zones of Bengaluru." },
-  { label: "Eco-Certified", icon: "🌿", desc: "Safe, low-toxicity chemicals for family and pets." }
+  { label: "Accountability", icon: "🤝", desc: "No call centers. Direct coordination with the specialist responsible for the result." },
+  { label: "Speed of Action", icon: "🚀", desc: "Immediate dispatch and inspection across Bengaluru's busy neighborhoods." },
+  { label: "Scientific Quality", icon: "🔬", desc: "Using targeted, low-toxicity protocols that prioritize resident safety." }
 ];
 
 export const PROCESS_STEPS = [
-  { title: "Smart Inspection", desc: "Detecting hidden colonies using moisture and heat signatures.", icon: "🔍" },
-  { title: "Targeted Treatment", icon: "🎯", desc: "Scientific application based on the specific biology of the pest." },
-  { title: "Seal & Protect", icon: "🛡️", desc: "Closing entry points and applying residual barriers." }
+  { title: "Smart Inspection", desc: "Thermal and moisture mapping to find hidden colonies.", icon: "🔍" },
+  { title: "Execution Plan", icon: "📋", desc: "Custom treatment protocols based on infestation severity." },
+  { title: "Validation", icon: "✅", desc: "Follow-up verification to ensure complete eradication." }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "1",
+    slug: "signs-of-termite-infestation-bengaluru",
+    category: "Termites",
+    title: "5 Warning Signs of Termites in Bengaluru Apartments",
+    date: "Oct 12, 2023",
+    excerpt: "Termites thrive in Bengaluru's weather. Learn how to spot mud tubes and hollow wood before the damage becomes irreversible.",
+    content: "Full guide on spotting termites in local construction..."
+  },
+  {
+    id: "2",
+    slug: "pigeon-health-risks",
+    category: "Bird Netting",
+    title: "Why Pigeon Droppings are a Serious Health Risk",
+    date: "Oct 05, 2023",
+    excerpt: "Pigeon droppings carry over 60 diseases. We discuss the importance of professional-grade bird netting for high-rise balconies.",
+    content: "Detailed health analysis and solution comparison..."
+  }
 ];
 
 export const SERVICES: ServiceInfo[] = [
   {
     id: "termite",
-    title: "Advanced Termite Protection",
+    title: "Termite Treatment Bengaluru",
     slug: "termite-treatment-bengaluru",
-    description: "Anti-termite solutions for Bengaluru's high-value wooden interiors.",
-    problem: "Termites (white ants) can silently destroy wooden furniture, door frames, and structural components. In Bengaluru's climate, they thrive year-round.",
-    inspection: "I perform a thorough site inspection to identify termite galleries, mud tubes, and moisture points using thermal imaging and moisture meters.",
-    method: "Advanced Drill-Fill-Seal technique. We use eco-friendly termiticides injected into 12mm holes spaced at 1-foot intervals along walls.",
-    safety: "Odourless and safe for children/pets. No need to vacate the house.",
-    applications: ["Independent Villas", "Apartments", "Office Spaces", "Pre-construction Sites"],
+    description: "Industrial-grade protection for your high-value interiors.",
+    problem: "Termites cause silent structural damage. In Bengaluru, high humidity often leads to rapid colony growth within false ceilings and cabinetry.",
+    inspection: "Specialized thermal scanning to locate moisture pockets and galleries without drilling first.",
+    method: "Drill-Fill-Seal using Bayer's Premise or equivalent high-end non-repellent termiticides.",
+    safety: "Eco-certified chemicals. Odorless and non-volatile for indoor safety.",
+    applications: ["Villas", "Apartments", "Commercial Hubs", "IT Parks"],
     faqs: [
-      { question: "How long does the termite treatment last?", answer: "Our standard treatment comes with a 5-year warranty for post-construction drill-fill methods." },
-      { question: "Is the chemical smelly?", answer: "No, we use premium odourless chemicals that don't disrupt your daily routine." }
+      { question: "Is the treatment guaranteed?", answer: "Yes, our post-construction termite treatments come with a 5-year accountability warranty." }
     ],
     icon: "🐜"
   },
   {
     id: "bird",
-    title: "Premium Bird Netting",
+    title: "Bird Netting Bengaluru",
     slug: "bird-netting-bengaluru",
-    description: "Surgical bird-proofing for balconies and high-rise apartments.",
-    problem: "Pigeon droppings carry over 60 diseases and damage building aesthetics. Nests in balconies cause hygiene issues.",
-    inspection: "Assessment of balcony area, duct spaces, and potential entry points for birds.",
-    method: "High-density polyethylene (HDPE) netting (UV stabilized). We use stainless steel hooks or wire ropes for tensioning, ensuring the net is invisible from a distance.",
-    safety: "No sharp edges. Safe for birds (they don't get trapped, just deterred) and safe for children near balconies.",
-    applications: ["High-rise Apartments", "Hotel Kitchens", "Industrial Sheds", "Air Condition Units"],
+    description: "Permanent bird-proofing with translucent invisible aesthetics.",
+    problem: "Pigeons contaminate balconies and AC units. They are a primary source of respiratory allergens in urban Bengaluru.",
+    inspection: "Structural audit of balcony tension points and bird entry paths.",
+    method: "HDPE UV-stabilized 0.7mm to 1mm translucent nets with SS304 rust-proof fixtures.",
+    safety: "No sharp edges. Safe for children and pets on high-rise balconies.",
+    applications: ["Apartment Balconies", "Duct Areas", "Factory Sheds"],
     faqs: [
-      { question: "Will the net rust?", answer: "We use UV-stabilized HDPE nets and stainless steel fixtures which are completely rust-proof." },
-      { question: "Does it block the view?", answer: "Our translucent or thin black nets are 90% transparent and barely visible from 10 feet away." }
+      { question: "How long does the net last?", answer: "Our high-grade HDPE nets typically last 8-10 years under direct Bengaluru sunlight." }
     ],
     icon: "🐦"
   },
   {
     id: "cockroach",
-    title: "Kitchen Cockroach Control",
+    title: "Cockroach Control Bengaluru",
     slug: "cockroach-control-bengaluru",
-    description: "Targeted gel and spray treatments for cockroach-free kitchens.",
-    problem: "Cockroaches contaminate food and spread allergies. Common species in Bengaluru include German and American cockroaches.",
-    inspection: "Locating hiding spots in kitchen cabinets, sink areas, and drainage pipes.",
-    method: "Advion Gel application in hidden spots plus professional residual spray in drainage and skirting areas.",
-    safety: "Targeted gel application means you don't need to empty your kitchen cabinets in most cases.",
-    applications: ["Residential Kitchens", "Restaurants", "Food Warehouses", "Corporate Pantries"],
+    description: "Surgical gel-based elimination for commercial & home kitchens.",
+    problem: "German cockroaches are resistant to standard sprays. They infest electronics and food prep areas.",
+    inspection: "Mapping 'hotspots' in kitchens, drainages, and appliances.",
+    method: "Advion/Fipronil gel application combined with growth regulators (IGR).",
+    safety: "Kitchen remains functional. No need to empty cabinets.",
+    applications: ["Restaurants", "Modular Kitchens", "Pantries"],
     faqs: [
-      { question: "Do I need to clean my kitchen after treatment?", answer: "No major cleaning is required. The gel stays active for weeks to catch recurring pests." },
-      { question: "When will I see results?", answer: "You will notice a 90% reduction within the first 48-72 hours." }
+      { question: "Will they come back?", answer: "Our service includes a 3-month follow-up to catch the hatching cycle." }
     ],
     icon: "🪳"
   },
   {
     id: "rodent",
-    title: "Integrated Rodent Control",
+    title: "Rodent Control Bengaluru",
     slug: "rodent-control-bengaluru",
-    description: "Effective rat and mouse control for urban residential and commercial premises.",
-    problem: "Rats chew through electrical wires and spread diseases like Leptospirosis. Common in Bengaluru's bustling urban areas.",
-    inspection: "Identifying runways, gnaw marks, and entry holes in the building perimeter.",
-    method: "Integrated Pest Management (IPM) involving baiting stations, glue traps, and physical sealing of entry points.",
-    safety: "Bait stations are tamper-proof and kept away from children and pets.",
-    applications: ["IT Parks", "Parking Lots", "Supermarkets", "Residential Societies"],
+    description: "Electronic-safe rat control for homes and IT offices.",
+    problem: "Rats chew expensive wiring. Common in Bengaluru's older buildings and busy areas like Indiranagar.",
+    inspection: "Identification of entry holes and nesting runways.",
+    method: "Tamper-proof bait stations and structural sealing (Rat-proofing).",
+    safety: "Bait stations are locked and safe from children/pets.",
+    applications: ["Basement Parking", "IT Servers", "Independent Homes"],
     faqs: [
-      { question: "Will the rats die inside my house?", answer: "We use specific baits that make rodents seek water and open air, reducing the chance of them dying in hidden indoor corners." },
-      { question: "How do you stop them from coming back?", answer: "We provide professional advice on 'Rat-Proofing' your entry points." }
+      { question: "Do you use poison?", answer: "We use professional anti-coagulant baits that cause mummification, reducing odors." }
     ],
     icon: "🐀"
   }

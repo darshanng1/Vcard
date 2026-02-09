@@ -4,6 +4,8 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import VCard from './components/VCard';
 import ServicePage from './components/ServicePage';
 import Layout from './components/Layout';
+import Booking from './components/Booking';
+import Blog from './components/Blog';
 import { SERVICES } from './constants';
 
 const App: React.FC = () => {
@@ -12,6 +14,8 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<VCard />} />
+          <Route path="/book" element={<Booking />} />
+          <Route path="/blog" element={<Blog />} />
           {SERVICES.map((service) => (
             <Route 
               key={service.id} 
@@ -20,11 +24,11 @@ const App: React.FC = () => {
             />
           ))}
           <Route path="*" element={
-            <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-6">
-              <h2 className="text-2xl font-bold text-gray-800">Page Not Found</h2>
-              <p className="text-gray-600 mt-2">The page you're looking for doesn't exist.</p>
-              <Link to="/" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full font-semibold">
-                Back to Profile
+            <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-6 bg-white">
+              <h2 className="text-3xl font-extrabold text-zinc-900">Resource Not Found</h2>
+              <p className="text-zinc-500 mt-2 max-w-xs">The specific service or page you are looking for has been moved or updated.</p>
+              <Link to="/" className="mt-8 px-10 py-4 bg-emerald-600 text-white rounded-full font-bold shadow-xl shadow-emerald-200">
+                Return to Safety
               </Link>
             </div>
           } />

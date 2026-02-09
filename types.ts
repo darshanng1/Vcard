@@ -22,3 +22,24 @@ export interface ContactData {
   email: string;
   bio: string;
 }
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  category: string;
+}
+
+export interface BookingFormData {
+  service: string;
+  propertyType: string;
+  severity: 'low' | 'medium' | 'high';
+  urgency: 'routine' | 'urgent' | 'emergency';
+  date: string;
+  time: string;
+  address: string;
+  contact: string;
+}

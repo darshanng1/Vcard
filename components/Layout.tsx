@@ -6,59 +6,70 @@ import { CONTACT_INFO, SERVICES } from '../constants';
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const isBooking = location.pathname === '/book';
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-emerald-100 selection:text-emerald-900">
-      <main className="flex-grow">
+    <div className="min-h-screen flex flex-col font-sans">
+      {/* Header / Nav */}
+      <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isHome ? 'bg-transparent' : 'bg-white/80 backdrop-blur-md border-b border-zinc-100'}`}>
+        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-emerald-600 rounded-xl"></div>
+            <span className={`font-black text-lg tracking-tighter ${isHome ? 'text-white' : 'text-zinc-900'}`}>DNG Protection.</span>
+          </Link>
+          <div className="flex items-center space-x-6">
+             <Link to="/blog" className={`text-sm font-bold ${isHome ? 'text-zinc-300 hover:text-white' : 'text-zinc-500 hover:text-emerald-600'} transition-colors hidden md:block`}>Authority</Link>
+             {!isBooking && (
+               <Link to="/book" className={`px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${isHome ? 'bg-emerald-500 text-zinc-950 hover:bg-emerald-400' : 'bg-zinc-900 text-white hover:bg-black'}`}>Book Inspection</Link>
+             )}
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-grow pt-0">
         {children}
       </main>
 
-      {/* Premium Footer - SEO Hub */}
-      <footer className="bg-zinc-50 border-t border-zinc-200 py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+      <footer className="bg-zinc-950 text-white py-24 px-6 rounded-t-[5rem]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
             <div>
-              <h4 className="text-lg font-bold text-zinc-900 mb-4">Direct Specialist Coordination</h4>
-              <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
-                Dealing with a technician directly ensures clear communication, faster execution, and better results than large corporate agencies.
+              <div className="flex items-center space-x-2 mb-8">
+                <div className="w-8 h-8 bg-emerald-600 rounded-xl"></div>
+                <span className="font-black text-2xl tracking-tighter text-white">DNG Protection.</span>
+              </div>
+              <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
+                Scientific pest elimination and high-rise bird netting for Bengaluru. Built on accountability and technical excellence.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-bold text-zinc-900 mb-4">Bengaluru Service Hub</h4>
-              <div className="flex flex-wrap gap-2">
+              <h4 className="text-zinc-200 font-black uppercase text-[10px] tracking-[0.3em] mb-8">Solutions</h4>
+              <div className="grid grid-cols-1 gap-4">
                 {SERVICES.map(s => (
-                  <Link 
-                    key={s.id} 
-                    to={`/service/${s.slug}`} 
-                    className="bg-white text-zinc-600 hover:text-emerald-600 text-xs border border-zinc-200 rounded-full px-4 py-2 transition-all hover:border-emerald-200 shadow-sm"
-                  >
-                    {s.title}
-                  </Link>
+                  <Link key={s.id} to={`/service/${s.slug}`} className="text-zinc-400 hover:text-emerald-500 font-bold text-sm transition-colors">{s.title}</Link>
                 ))}
               </div>
             </div>
+            <div>
+               <h4 className="text-zinc-200 font-black uppercase text-[10px] tracking-[0.3em] mb-8">Direct Access</h4>
+               <a href={`tel:${CONTACT_INFO.phone}`} className="block text-2xl font-black mb-4 hover:text-emerald-500 transition-colors">{CONTACT_INFO.phone}</a>
+               <a href={`mailto:${CONTACT_INFO.email}`} className="block text-zinc-500 hover:text-white transition-colors">specialist@darshanng.com</a>
+            </div>
           </div>
-          <div className="pt-12 border-t border-zinc-200 text-center">
-            <div className="text-zinc-400 text-[10px] uppercase font-bold tracking-widest mb-4">
-              &copy; {new Date().getFullYear()} {CONTACT_INFO.name}. All Rights Reserved.
-            </div>
-            <div className="text-zinc-300 text-[9px] max-w-md mx-auto leading-relaxed">
-              Professional pest control and bird netting services available in Whitefield, Indiranagar, Koramangala, Jayanagar, and all across Bengaluru.
-            </div>
+          <div className="pt-12 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-zinc-600 text-[10px] font-black uppercase tracking-widest">&copy; {new Date().getFullYear()} Darshan N G Specialist</div>
+            <div className="text-zinc-700 text-[10px] font-bold">Whitefield • Indiranagar • Koramangala • Jayanagar • Bengaluru</div>
           </div>
         </div>
       </footer>
 
-      {/* Sticky Quick Contact - Appears on Service Pages / Scroll */}
-      {!isHome && (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-50 w-full max-w-[90%] md:max-w-xs">
-          <a 
-            href={`tel:${CONTACT_INFO.phone}`}
-            className="flex-1 flex items-center justify-center space-x-2 bg-emerald-600 text-white px-6 py-4 rounded-full shadow-2xl font-bold transition-transform active:scale-95"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-            <span>Call Now</span>
-          </a>
+      {/* Floating Action Mobile */}
+      {!isBooking && (
+        <div className="md:hidden fixed bottom-10 left-6 right-6 z-50">
+          <Link to="/book" className="flex items-center justify-center space-x-3 bg-emerald-600 text-white p-5 rounded-3xl shadow-2xl shadow-emerald-600/30 font-black text-lg active:scale-95 transition-transform">
+            <span>Book Expert Inspection</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </Link>
         </div>
       )}
     </div>
