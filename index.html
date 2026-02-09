@@ -4,38 +4,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Darshan N G | Digital Visiting Card</title>
+    <title>Darshan N G | Sr. Business Development - SIPC India</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --brand-green: #059669;
+        --brand-black: #09090b;
+      }
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        background-color: #f9fafb;
+        background-color: #000000;
         margin: 0;
         padding: 0;
-        color: #111827;
+        color: #ffffff;
         overflow-x: hidden;
       }
       .app-container {
         max-width: 500px;
         margin: 0 auto;
-        background: #ffffff;
+        background: #09090b;
         min-height: 100vh;
         position: relative;
-        box-shadow: 0 0 50px rgba(0,0,0,0.05);
+        box-shadow: 0 0 100px rgba(0,0,0,0.5);
       }
       .glass {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(18, 18, 23, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
-      .action-shadow {
-        box-shadow: 0 12px 30px -10px rgba(5, 150, 105, 0.3);
+      .glass-light {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
-      ::-webkit-scrollbar { width: 4px; }
+      .mesh-gradient {
+        background: radial-gradient(at 0% 0%, hsla(161, 89%, 30%, 0.15) 0, transparent 50%),
+                    radial-gradient(at 100% 100%, hsla(161, 89%, 30%, 0.1) 0, transparent 50%);
+      }
+      .text-heading { font-family: 'Space Grotesk', sans-serif; }
+      .glow-green { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+      .glow-text { text-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .float { animation: float 6s ease-in-out infinite; }
+      
+      ::-webkit-scrollbar { width: 3px; }
       ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
     </style>
     <script type="importmap">

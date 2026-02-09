@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SERVICES, CONTACT_INFO } from '../constants';
+import { SERVICES, CONTACT_INFO, COMPANY_INFO } from '../constants';
 
 const Booking: React.FC = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     service: '',
-    propertyType: 'Residential',
-    severity: 'Medium',
+    propertyType: 'Corporate HQ',
+    severity: 'Audit Compliance',
     name: '',
     contact: '',
     address: '',
@@ -20,31 +20,34 @@ const Booking: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStep(4); // Success
+    setStep(4);
   };
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="pt-10 px-6 pb-20">
-        <Link to="/" className="inline-flex items-center text-zinc-400 font-bold text-sm mb-10 hover:text-emerald-600 transition-colors">
-          <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path></svg>
-          Back
+    <div className="bg-zinc-950 min-h-screen text-white">
+      <div className="pt-10 px-8 pb-32">
+        <Link to="/" className="inline-flex items-center text-zinc-500 font-bold text-[10px] uppercase tracking-widest mb-12 hover:text-emerald-500 transition-colors">
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path></svg>
+          Exit Consultation
         </Link>
 
         <AnimatePresence mode="wait">
           {step === 1 && (
             <motion.div key="1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
-              <h1 className="text-4xl font-black text-zinc-900 leading-tight mb-4">Select<br/>Service.</h1>
-              <p className="text-zinc-400 text-sm mb-10">What do you need assistance with?</p>
-              <div className="grid grid-cols-1 gap-3">
+              <h1 className="text-heading text-4xl font-black text-white leading-tight mb-4 tracking-tighter">Strategic Audit<br/><span className="text-emerald-500">Selection.</span></h1>
+              <p className="text-zinc-500 text-sm mb-12 font-medium">Which hygiene protocol requires assessment?</p>
+              <div className="space-y-4">
                 {SERVICES.map(s => (
                   <button 
                     key={s.id} 
                     onClick={() => { setFormData({...formData, service: s.title}); nextStep(); }}
-                    className="flex items-center space-x-5 bg-zinc-50 border border-zinc-100 p-6 rounded-3xl text-left active:scale-95 transition-all"
+                    className="w-full flex items-center justify-between glass p-6 rounded-3xl text-left border-white/5 hover:border-emerald-500/30 transition-all"
                   >
-                    <span className="text-3xl">{s.icon}</span>
-                    <span className="font-extrabold text-zinc-900">{s.title}</span>
+                    <div className="flex items-center space-x-5">
+                      <span className="text-3xl filter grayscale brightness-150">{s.icon}</span>
+                      <span className="font-bold text-white text-sm">{s.title}</span>
+                    </div>
+                    <svg className="w-5 h-5 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path></svg>
                   </button>
                 ))}
               </div>
@@ -53,18 +56,18 @@ const Booking: React.FC = () => {
 
           {step === 2 && (
             <motion.div key="2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
-              <h2 className="text-3xl font-black text-zinc-900 mb-2">Qualification.</h2>
-              <p className="text-zinc-400 text-sm mb-10">Help me prepare for the site audit.</p>
+              <h2 className="text-heading text-3xl font-black text-white mb-2">Technical Scoping.</h2>
+              <p className="text-zinc-500 text-sm mb-12 font-medium tracking-tight">Qualifying the audit parameters for {COMPANY_INFO.shortName}.</p>
               
-              <div className="space-y-10">
+              <div className="space-y-12">
                 <div>
-                  <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-4 block">Property Type</label>
-                  <div className="flex flex-wrap gap-2">
-                    {['Home', 'Office', 'Factory', 'Villa'].map(t => (
+                  <label className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-600 mb-6 block">Facility Profile</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Corporate HQ', 'Data Center', 'Factory', 'Premium Estate'].map(t => (
                       <button 
                         key={t} 
                         onClick={() => setFormData({...formData, propertyType: t})}
-                        className={`px-8 py-3 rounded-full font-bold text-xs transition-all ${formData.propertyType === t ? 'bg-zinc-900 text-white shadow-xl' : 'bg-zinc-100 text-zinc-500'}`}
+                        className={`px-4 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest transition-all border ${formData.propertyType === t ? 'bg-white text-zinc-950 border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]' : 'bg-white/5 text-zinc-500 border-white/5'}`}
                       >
                         {t}
                       </button>
@@ -73,13 +76,13 @@ const Booking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-4 block">Severity Level</label>
-                  <div className="flex gap-2">
-                    {['Low', 'Medium', 'High'].map(s => (
+                  <label className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-600 mb-6 block">Strategic Urgency</label>
+                  <div className="flex gap-3">
+                    {['Routine', 'Audit Compliance', 'Emergency'].map(s => (
                       <button 
                         key={s} 
                         onClick={() => setFormData({...formData, severity: s})}
-                        className={`flex-1 py-4 rounded-2xl font-black text-xs transition-all ${formData.severity === s ? 'bg-emerald-600 text-white shadow-xl shadow-emerald-200' : 'bg-zinc-100 text-zinc-500'}`}
+                        className={`flex-1 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all border ${formData.severity === s ? 'bg-emerald-600 text-white border-emerald-600 shadow-[0_0_20px_rgba(16,185,129,0.3)]' : 'bg-white/5 text-zinc-500 border-white/5'}`}
                       >
                         {s}
                       </button>
@@ -89,23 +92,25 @@ const Booking: React.FC = () => {
               </div>
 
               <div className="mt-20 flex space-x-3">
-                <button onClick={prevStep} className="flex-1 py-5 rounded-2xl font-black text-sm bg-zinc-50 text-zinc-400">Back</button>
-                <button onClick={nextStep} className="flex-[2] py-5 rounded-2xl font-black text-sm bg-emerald-600 text-white shadow-xl action-shadow">Continue</button>
+                <button onClick={prevStep} className="flex-1 py-5 rounded-full font-black text-xs uppercase tracking-widest bg-zinc-900 text-zinc-500">Back</button>
+                <button onClick={nextStep} className="flex-[2] py-5 rounded-full font-black text-xs uppercase tracking-widest bg-white text-zinc-950 shadow-2xl">Confirm Parameters</button>
               </div>
             </motion.div>
           )}
 
           {step === 3 && (
             <motion.div key="3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
-              <h2 className="text-3xl font-black text-zinc-900 mb-2">Contact.</h2>
-              <p className="text-zinc-400 text-sm mb-10">Finalize your slot.</p>
+              <h2 className="text-heading text-3xl font-black text-white mb-2">Coordination.</h2>
+              <p className="text-zinc-500 text-sm mb-12">Enter professional contact details.</p>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input required placeholder="Your Name" className="w-full bg-zinc-50 border-2 border-zinc-100 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all" onChange={e => setFormData({...formData, name: e.target.value})} />
-                <input required placeholder="Bengaluru Phone" className="w-full bg-zinc-50 border-2 border-zinc-100 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all" onChange={e => setFormData({...formData, contact: e.target.value})} />
-                <textarea required placeholder="Area / Landmark" className="w-full bg-zinc-50 border-2 border-zinc-100 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all h-32" onChange={e => setFormData({...formData, address: e.target.value})} />
-                <div className="pt-10 flex space-x-3">
-                  <button type="button" onClick={prevStep} className="flex-1 py-5 rounded-2xl font-black text-sm bg-zinc-50 text-zinc-400">Back</button>
-                  <button type="submit" className="flex-[2] py-5 rounded-2xl font-black text-sm bg-emerald-600 text-white shadow-xl action-shadow">Confirm Slot</button>
+                <div className="group">
+                  <input required placeholder="Full Name" className="w-full bg-white/5 border border-white/5 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all text-sm" onChange={e => setFormData({...formData, name: e.target.value})} />
+                </div>
+                <input required placeholder="Direct Phone Line" className="w-full bg-white/5 border border-white/5 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all text-sm" onChange={e => setFormData({...formData, contact: e.target.value})} />
+                <textarea required placeholder="Facility Address / Corporate Landmark" className="w-full bg-white/5 border border-white/5 p-6 rounded-3xl outline-none focus:border-emerald-500 font-bold transition-all h-32 text-sm" onChange={e => setFormData({...formData, address: e.target.value})} />
+                <div className="pt-12 flex space-x-3">
+                  <button type="button" onClick={prevStep} className="flex-1 py-5 rounded-full font-black text-xs uppercase tracking-widest bg-zinc-900 text-zinc-500">Back</button>
+                  <button type="submit" className="flex-[2] py-5 rounded-full font-black text-xs uppercase tracking-widest bg-emerald-600 text-white shadow-xl glow-green">Submit Request</button>
                 </div>
               </form>
             </motion.div>
@@ -113,20 +118,22 @@ const Booking: React.FC = () => {
 
           {step === 4 && (
             <motion.div key="4" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center pt-10">
-              <div className="w-24 h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl">
+              <div className="w-24 h-24 bg-emerald-600/20 text-emerald-500 rounded-[2.5rem] flex items-center justify-center mx-auto mb-10 shadow-2xl border border-emerald-500/20">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7"></path></svg>
               </div>
-              <h2 className="text-4xl font-black text-zinc-900 mb-4">Confirmed!</h2>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-12">
-                Darshan will personally contact you in <span className="text-emerald-600 font-black">15 minutes</span> to finalize the technician dispatch.
+              <h2 className="text-heading text-4xl font-black text-white mb-6 tracking-tighter">Protocol Engaged.</h2>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-16 max-w-xs mx-auto">
+                Consultation request logged. Darshan N G will initiate coordination within <span className="text-white font-black">30 minutes</span> during business hours.
               </p>
-              <a 
-                href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Hi%20Darshan,%20I%20just%20booked%20an%20audit%20for%20${formData.service}`} 
-                className="block w-full bg-emerald-600 text-white py-6 rounded-3xl font-black shadow-xl shadow-emerald-200"
-              >
-                Send Fast Notification
-              </a>
-              <Link to="/" className="block w-full py-6 mt-4 text-zinc-400 font-black text-xs uppercase tracking-widest">Done</Link>
+              <div className="space-y-4">
+                <a 
+                  href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=URGENT:%20Consultation%20ID%20SIPC-${Math.floor(Math.random()*10000)}`} 
+                  className="block w-full bg-white text-zinc-950 py-6 rounded-full font-black uppercase tracking-widest text-xs shadow-2xl"
+                >
+                  Priority WhatsApp Notification
+                </a>
+                <Link to="/" className="block w-full py-4 text-zinc-600 font-black text-[9px] uppercase tracking-[0.4em] hover:text-white transition-colors">Return to Dashboard</Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
