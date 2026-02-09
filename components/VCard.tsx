@@ -1,12 +1,10 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO, COMPANY_INFO } from '../constants';
 
 const VCard: React.FC = () => {
-  const [isSaving, setIsSaving] = useState(false);
-
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -19,138 +17,139 @@ const VCard: React.FC = () => {
     }
   };
 
-  const dashboardItems = [
-    { label: "Call", icon: "📞", link: `tel:${CONTACT_INFO.phone}`, external: true, color: "bg-emerald-600" },
-    { label: "WhatsApp", icon: "💬", link: `https://wa.me/${CONTACT_INFO.whatsapp}`, external: true, color: "bg-zinc-800" },
-    { label: "Book Meeting", icon: "📅", link: "/book", external: false, color: "bg-zinc-800" },
-    { label: "Live Chat", icon: "🤖", link: "/chat", external: false, color: "bg-zinc-800" },
-    { label: "Rate Card", icon: "📄", link: "/rate-card", external: false, color: "bg-zinc-800" },
-    { label: "Invoice/PDF", icon: "🧾", link: "/invoice", external: false, color: "bg-zinc-800" },
-    { label: "Share Card", icon: "📤", action: handleShare, color: "bg-zinc-800" },
-    { label: "Website", icon: "🌐", link: `https://${COMPANY_INFO.website}`, external: true, color: "bg-zinc-800" },
-    { label: "Map", icon: "📍", link: "https://www.google.com/maps/search/?api=1&query=Dooravani+Nagar+Bengaluru", external: true, color: "bg-zinc-800" },
+  const primaryActions = [
+    { label: "Direct Call", icon: "📞", link: `tel:${CONTACT_INFO.phone}`, type: 'ext', color: "bg-emerald-600 shadow-emerald-900/40" },
+    { label: "WhatsApp", icon: "💬", link: `https://wa.me/${CONTACT_INFO.whatsapp}`, type: 'ext', color: "bg-zinc-800 border-zinc-700/50" },
+    { label: "Schedule", icon: "📅", link: "/book", type: 'int', color: "bg-zinc-800 border-zinc-700/50" },
+    { label: "Consult", icon: "🤖", link: "/chat", type: 'int', color: "bg-zinc-800 border-zinc-700/50" },
+  ];
+
+  const secondaryTools = [
+    { label: "Rate Card", icon: "📄", link: "/rate-card" },
+    { label: "Invoice", icon: "🧾", link: "/invoice" },
+    { label: "Map", icon: "📍", link: "https://maps.google.com" },
+    { label: "Web", icon: "🌐", link: `https://${COMPANY_INFO.website}` },
+    { label: "Share", icon: "📤", action: handleShare },
   ];
 
   return (
-    <div className="min-h-full flex flex-col mesh-gradient">
-      {/* 🎬 HEADER AREA (Parallax Style) */}
-      <section className="relative px-8 pt-12 pb-8 flex flex-col items-center">
+    <div className="flex-grow flex flex-col relative overflow-hidden mesh-gradient">
+      
+      {/* LAYER 1: IMMERSIVE IDENTITY */}
+      <section className="relative h-[45%] flex flex-col items-center justify-center px-8 pt-8">
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="relative z-10 w-full flex flex-col items-center"
         >
-          {/* Logo & Profile Layer */}
-          <div className="relative mb-6">
+          {/* Company Badge */}
+          <div className="absolute top-0 left-0 p-6 opacity-40">
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+              <span className="text-white text-[10px] font-black">S</span>
+            </div>
+          </div>
+
+          {/* Profile Parallax */}
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-emerald-500/20 rounded-[2.5rem] blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
             <motion.div 
-              animate={{ y: [0, -5, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="w-24 h-24 rounded-[2rem] glass p-1.5 border-emerald-500/20 shadow-2xl"
+              whileHover={{ scale: 1.05, rotate: -2 }}
+              className="relative w-28 h-28 rounded-[2.5rem] glass p-2 overflow-hidden border-emerald-500/30"
             >
               <img 
                 src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${CONTACT_INFO.name}&backgroundColor=059669`} 
                 alt={CONTACT_INFO.name} 
-                className="w-full h-full rounded-[1.8rem] object-cover grayscale brightness-110"
+                className="w-full h-full rounded-[2.2rem] object-cover grayscale brightness-110"
               />
             </motion.div>
-            <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg border border-zinc-100">
-               <div className="w-6 h-6 bg-emerald-600 rounded-md"></div>
-            </div>
           </div>
 
-          <div className="text-center">
-            <h1 className="text-heading text-3xl font-black text-white tracking-tighter mb-1">
+          {/* Typography Reveal */}
+          <div className="mt-8 text-center sweep-effect relative">
+            <h1 className="text-heading text-4xl font-black text-white tracking-tighter mb-1">
               {CONTACT_INFO.name}
             </h1>
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500 mb-2">{CONTACT_INFO.role}</p>
-            <p className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">{COMPANY_INFO.name}</p>
+            <div className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500 mb-2 glow-text">
+              {CONTACT_INFO.role}
+            </div>
+            <div className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest">
+              {COMPANY_INFO.name}
+            </div>
           </div>
         </motion.div>
       </section>
 
-      {/* 📱 PRIMARY ACTION GRID (3x3) */}
-      <section className="px-6 flex-grow">
-        <div className="grid grid-cols-3 gap-4 mb-8">
-          {dashboardItems.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-            >
-              {item.action ? (
-                <button 
-                  onClick={item.action}
-                  className={`w-full aspect-square rounded-[2rem] ${item.color} flex flex-col items-center justify-center dashboard-card border border-white/5 shadow-xl`}
-                >
-                  <span className="text-2xl mb-1">{item.icon}</span>
-                  <span className="text-[8px] font-black uppercase tracking-widest text-white/80">{item.label}</span>
-                </button>
-              ) : item.external ? (
-                <a 
-                  href={item.link} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className={`w-full aspect-square rounded-[2rem] ${item.color} flex flex-col items-center justify-center dashboard-card border border-white/5 shadow-xl`}
-                >
-                  <span className="text-2xl mb-1">{item.icon}</span>
-                  <span className="text-[8px] font-black uppercase tracking-widest text-white/80">{item.label}</span>
+      {/* LAYER 2 & 3: ACTION HUB */}
+      <section className="flex-grow glass rounded-t-[3.5rem] p-8 pb-12 flex flex-col">
+        
+        {/* Smart Status */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 breathe-glow shadow-emerald-500/50 shadow-lg"></div>
+            <span className="text-[9px] font-black uppercase tracking-widest text-emerald-500">Available for consultation</span>
+          </div>
+        </div>
+
+        {/* Primary Magnetic Grid */}
+        <div className="grid grid-cols-2 gap-4 mb-10">
+          {primaryActions.map((action, i) => (
+            <div key={i}>
+              {action.type === 'ext' ? (
+                <a href={action.link} className={`w-full h-20 flex flex-col items-center justify-center rounded-3xl ${action.color} border border-white/5 magnetic-action shadow-2xl`}>
+                  <span className="text-2xl mb-1">{action.icon}</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-white/80">{action.label}</span>
                 </a>
               ) : (
-                <Link 
-                  to={item.link!}
-                  className={`w-full aspect-square rounded-[2rem] ${item.color} flex flex-col items-center justify-center dashboard-card border border-white/5 shadow-xl`}
-                >
-                  <span className="text-2xl mb-1">{item.icon}</span>
-                  <span className="text-[8px] font-black uppercase tracking-widest text-white/80">{item.label}</span>
+                <Link to={action.link} className={`w-full h-20 flex flex-col items-center justify-center rounded-3xl ${action.color} border border-white/5 magnetic-action shadow-2xl`}>
+                  <span className="text-2xl mb-1">{action.icon}</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-white/80">{action.label}</span>
                 </Link>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* 🛠 SECONDARY TOOLS DOCK (Scrollable Row) */}
-        <div className="mb-10">
-          <h2 className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-600 mb-4 px-2">Project Tools</h2>
-          <div className="flex space-x-3 overflow-x-auto no-scrollbar px-2 pb-4">
-            {[
-              { label: "Site Photo", icon: "📸" },
-              { label: "Site Video", icon: "📹" },
-              { label: "Inspection", icon: "🛡️" },
-              { label: "Callback", icon: "🤙" }
-            ].map((tool, i) => (
-              <button 
-                key={i}
-                className="flex-shrink-0 flex items-center space-x-3 bg-white/5 border border-white/5 px-6 py-4 rounded-2xl active:scale-95 transition-transform"
-              >
-                <span className="text-xl">{tool.icon}</span>
-                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 whitespace-nowrap">{tool.label}</span>
-              </button>
+        {/* Secondary Tool Dock */}
+        <div className="mt-auto">
+          <div className="flex justify-between items-center px-2">
+            {secondaryTools.map((tool, i) => (
+              <div key={i} className="flex flex-col items-center space-y-2">
+                {tool.action ? (
+                  <button onClick={tool.action} className="w-12 h-12 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-colors">
+                    <span className="text-lg">{tool.icon}</span>
+                  </button>
+                ) : tool.link?.startsWith('http') ? (
+                  <a href={tool.link} target="_blank" className="w-12 h-12 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-colors">
+                    <span className="text-lg">{tool.icon}</span>
+                  </a>
+                ) : (
+                  <Link to={tool.link!} className="w-12 h-12 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-colors">
+                    <span className="text-lg">{tool.icon}</span>
+                  </Link>
+                )}
+                <span className="text-[7px] font-black uppercase tracking-widest text-zinc-600">{tool.label}</span>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 🔐 CORPORATE FOOTER (Fixed-ish) */}
-      <footer className="mt-auto px-8 py-8 border-t border-white/5 bg-black/40 backdrop-blur-xl">
-        <div className="flex items-center justify-between text-[8px] font-black uppercase tracking-[0.3em] text-zinc-600">
-          <span>&copy; SIPC India Executive</span>
-          <button 
-            onClick={() => {
-              const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${CONTACT_INFO.name}\nORG:${COMPANY_INFO.name}\nTITLE:${CONTACT_INFO.role}\nTEL;TYPE=CELL:${CONTACT_INFO.phone}\nEND:VCARD`;
-              const blob = new Blob([vcard], { type: 'text/vcard' });
-              const url = window.URL.createObjectURL(blob);
-              const link = document.createElement('a');
-              link.href = url;
-              link.setAttribute('download', `Darshan_NG_SIPC.vcf`);
-              link.click();
-            }}
-            className="text-emerald-500"
-          >
-            Sync Contacts
-          </button>
-        </div>
-      </footer>
+      {/* Sync Bar */}
+      <div className="absolute bottom-4 left-0 w-full text-center">
+        <button 
+          onClick={() => {
+            const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${CONTACT_INFO.name}\nORG:${COMPANY_INFO.name}\nTITLE:${CONTACT_INFO.role}\nTEL;TYPE=CELL:${CONTACT_INFO.phone}\nEND:VCARD`;
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url; link.download = 'Darshan_SIPC.vcf'; link.click();
+          }}
+          className="text-[9px] font-black uppercase tracking-[0.4em] text-zinc-700 hover:text-emerald-500 transition-colors"
+        >
+          Sync Protocol Registry
+        </button>
+      </div>
+
     </div>
   );
 };
