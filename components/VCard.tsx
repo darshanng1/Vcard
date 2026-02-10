@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO, COMPANY_INFO } from '../constants';
 
@@ -148,4 +148,78 @@ const VCard: React.FC = () => {
       </section>
 
       {/* 🚀 ACTION HUB DASHBOARD */}
-      <section className="flex-grow glass rounded-t-[4.5rem] p-8 pb-12 flex flex
+      <section className="flex-grow glass rounded-t-[4.5rem] p-8 pb-12 flex flex-col shadow-[0_-30px_100px_rgba(0,0,0,0.9)] border-t border-white/10 relative z-10">
+        
+        {/* Operational Status */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex items-center px-6 py-2.5 rounded-full bg-emerald-500/5 border border-emerald-500/10">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 mr-3 breathe-glow shadow-emerald-500/50 shadow-lg" />
+            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-emerald-500/80">Site Audit Protocol Active</span>
+          </div>
+        </div>
+
+        {/* Primary Functional Grid */}
+        <div className="grid grid-cols-2 gap-4 mb-12">
+          {primaryActions.map((action, i) => (
+            <div key={i}>
+              {action.type === 'ext' ? (
+                <a href={action.link} className={`w-full h-24 flex flex-col items-center justify-center rounded-[2.8rem] ${action.color} border border-white/5 magnetic-action shadow-2xl`}>
+                  <span className="text-2xl mb-1.5">{action.icon}</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-white/90">{action.label}</span>
+                </a>
+              ) : (
+                <Link to={action.link} className={`w-full h-24 flex flex-col items-center justify-center rounded-[2.8rem] ${action.color} border border-white/5 magnetic-action shadow-2xl`}>
+                  <span className="text-2xl mb-1.5">{action.icon}</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-white/90">{action.label}</span>
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Secondary Navigation Ribbon */}
+        <div className="mt-auto">
+          <div className="flex justify-between items-center px-2">
+            {secondaryTools.map((tool, i) => (
+              <div key={i} className="flex flex-col items-center space-y-3">
+                {tool.action ? (
+                  <button onClick={tool.action} className="w-13 h-13 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-all shadow-xl hover:border-emerald-500/20">
+                    <span className="text-xl">{tool.icon}</span>
+                  </button>
+                ) : tool.link?.startsWith('http') ? (
+                  <a href={tool.link} target="_blank" className="w-13 h-13 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-all shadow-xl hover:border-emerald-500/20">
+                    <span className="text-xl">{tool.icon}</span>
+                  </a>
+                ) : (
+                  <Link to={tool.link!} className="w-13 h-13 glass rounded-2xl flex items-center justify-center active:bg-white/10 transition-all shadow-xl hover:border-emerald-500/20">
+                    <span className="text-xl">{tool.icon}</span>
+                  </Link>
+                )}
+                <span className="text-[7px] font-black uppercase tracking-[0.2em] text-zinc-600">{tool.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Identity Footer */}
+      <div className="bg-zinc-950 py-5 text-center border-t border-white/5 relative z-20">
+        <button 
+          onClick={() => {
+            const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${CONTACT_INFO.name}\nORG:${COMPANY_INFO.name}\nTITLE:${CONTACT_INFO.role}\nTEL;TYPE=CELL:${CONTACT_INFO.phone}\nEMAIL:${CONTACT_INFO.email}\nADR;TYPE=WORK:;;Dooravani Nagar;Bengaluru;Karnataka;560016;India\nURL:https://${COMPANY_INFO.website}\nEND:VCARD`;
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url; link.download = 'Darshan_NG_SIPC_Authority.vcf'; link.click();
+          }}
+          className="text-[9px] font-black uppercase tracking-[0.5em] text-zinc-800 hover:text-emerald-500 transition-colors"
+        >
+          Authorized Corporate Credential
+        </button>
+      </div>
+
+    </div>
+  );
+};
+
+export default VCard;
