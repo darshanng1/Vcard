@@ -1,5 +1,5 @@
 {
-  "name": "darshan-n-g---digital-vcard",
+  "name": "sipc-digital-vcard-|-darshan-n-g",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,8 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router-dom": "7.1.3",
-    "framer-motion": "11.15.0"
+    "framer-motion": "11.15.0",
+    "@google/genai": "^1.40.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
