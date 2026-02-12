@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO, COMPANY_INFO, SERVICES } from '../constants';
+import logoImg from '../assets/images/SIPClogo.jpg';
+import profileImg from '../assets/images/Darshan.jpeg';
 
 const FloatingChat: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   const whatsappNumber = "8618764541";
@@ -9,7 +11,7 @@ const FloatingChat: React.FC<{ isDark: boolean }> = ({ isDark }) => {
 
   return (
     <div className="fixed bottom-10 right-10 z-[999]">
-      <a 
+      <a
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -44,17 +46,17 @@ const PestMotionRibbon: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   return (
     <div className={`w-full overflow-hidden py-8 border-y mb-12 backdrop-blur-sm transition-colors duration-500 ${isDark ? 'bg-slate-900/30 border-white/5' : 'bg-slate-200/50 border-slate-300'}`}>
       <div className="flex whitespace-nowrap">
-        <motion.div 
+        <motion.div
           animate={{ x: [0, -2200] }}
           transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
           className="flex space-x-12 px-8 items-center"
         >
           {[...SERVICES, ...SERVICES, ...SERVICES].map((p, i) => (
             <Link key={i} to={`/service/${p.slug}`} className="block">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0.6, scale: 1 }}
-                animate={{ 
-                  opacity: [0.6, 1, 0.6], 
+                animate={{
+                  opacity: [0.6, 1, 0.6],
                   scale: [1, 1.15, 1],
                   filter: [
                     "drop-shadow(0 0 0px rgba(16, 185, 129, 0))",
@@ -62,9 +64,9 @@ const PestMotionRibbon: React.FC<{ isDark: boolean }> = ({ isDark }) => {
                     "drop-shadow(0 0 0px rgba(16, 185, 129, 0))"
                   ]
                 }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity, 
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
                   delay: (i % SERVICES.length) * 0.25,
                   ease: "easeInOut"
                 }}
@@ -87,18 +89,18 @@ const PestMotionRibbon: React.FC<{ isDark: boolean }> = ({ isDark }) => {
 
 const AnimatedServiceCard: React.FC<{ service: any; isDark: boolean }> = ({ service, isDark }) => {
   return (
-    <Link 
-      to={`/service/${service.slug}`} 
+    <Link
+      to={`/service/${service.slug}`}
       className="block no-underline"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0.9, scale: 1 }}
-        whileInView={{ 
-          opacity: 1, 
+        whileInView={{
+          opacity: 1,
           scale: [1, 1.04, 1],
           boxShadow: [
-            "0 0 0px rgba(16, 185, 129, 0)", 
-            "0 0 20px rgba(16, 185, 129, 0.35)", 
+            "0 0 0px rgba(16, 185, 129, 0)",
+            "0 0 20px rgba(16, 185, 129, 0.35)",
             "0 0 0px rgba(16, 185, 129, 0)"
           ]
         }}
@@ -108,7 +110,7 @@ const AnimatedServiceCard: React.FC<{ service: any; isDark: boolean }> = ({ serv
           isDark ? 'bg-slate-900/40 border-white/5 hover:bg-slate-900' : 'bg-white border-slate-200 hover:border-emerald-500'
         }`}
       >
-        <motion.span 
+        <motion.span
           whileInView={{ scale: [1, 1.25, 1] }}
           viewport={{ once: false, amount: 0.5 }}
           className="text-5xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110"
@@ -139,21 +141,21 @@ const VCard: React.FC = () => {
   return (
     <div className={`flex-grow flex flex-col relative overflow-y-auto no-scrollbar scroll-smooth transition-colors duration-500 ${isDark ? 'bg-slate-950 text-slate-200' : 'bg-[#e2e8f0] text-slate-800'}`}>
       <BackgroundAtmosphere isDark={isDark} />
-      
+
       {/* 🧭 Header */}
       <nav className="relative z-[100] py-10">
         <div className="max-w-[500px] mx-auto px-10 flex justify-between items-center">
           <div className="w-24 h-24 p-2 rounded-full bg-white flex items-center justify-center shadow-xl">
-            <img src="images/logo.png" alt="SIPC Logo" className="w-[85%] h-[85%] object-contain" />
+            <img src={logoImg} alt="SIPC Logo" className="w-[85%] h-[85%] object-contain" />
           </div>
           <div className="flex space-x-3">
-             <button 
+             <button
               onClick={() => setIsDark(!isDark)}
               className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform active:scale-90 ${isDark ? 'bg-slate-900 text-yellow-400' : 'bg-slate-200 text-slate-600'}`}
             >
               {isDark ? '🌙' : '☀️'}
             </button>
-            <button 
+            <button
               onClick={handleShare}
               className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform active:scale-90 ${isDark ? 'bg-slate-900 text-white' : 'bg-slate-200 text-slate-600'}`}
             >
@@ -165,15 +167,15 @@ const VCard: React.FC = () => {
 
       {/* 👤 Identity Section */}
       <section className="relative pb-12 px-10 flex flex-col items-center z-10 text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="relative mb-10"
         >
           <div className={`absolute -inset-10 rounded-full blur-3xl ${isDark ? 'bg-emerald-500/10' : 'bg-emerald-200/20'}`} />
           <div className={`relative w-40 h-40 rounded-full overflow-hidden border-2 shadow-2xl transition-colors duration-500 ${isDark ? 'border-white/10 bg-slate-900' : 'border-white bg-slate-100'}`}>
-            <img src="images/darshan.jpg" alt={CONTACT_INFO.name} className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-0" />
-          </div>
+            <img src={profileImg} alt={CONTACT_INFO.name} className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-0" />
+   </div>
         </motion.div>
 
         <h1 className={`text-heading text-4xl font-black tracking-tighter mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{CONTACT_INFO.name}</h1>
@@ -200,10 +202,10 @@ const VCard: React.FC = () => {
             Book Inspection
           </Link>
         </div>
-        
-        <a 
-          href={COMPANY_INFO.fullUrl} 
-          target="_blank" 
+
+        <a
+          href={COMPANY_INFO.fullUrl}
+          target="_blank"
           rel="noopener noreferrer"
           className={`w-full max-w-[400px] flex items-center justify-center py-3 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-xl border-2 ${isDark ? 'bg-white text-slate-950 border-white' : 'bg-slate-900 text-white border-slate-900'}`}
         >
@@ -245,19 +247,19 @@ const VCard: React.FC = () => {
 
         {/* Embedded Map */}
         <div className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${isDark ? 'border-white/5' : 'border-slate-300'}`}>
-          <iframe 
+          <iframe
             src={COMPANY_INFO.mapUrl}
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 
         {/* Company Profile Button */}
-        <Link 
+        <Link
           to="/rate-card"
           className={`w-full max-w-[320px] flex items-center justify-center py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-lg border-2 mb-10 ${isDark ? 'bg-slate-900 text-white border-white/10' : 'bg-slate-200 text-slate-800 border-slate-300'}`}
         >
