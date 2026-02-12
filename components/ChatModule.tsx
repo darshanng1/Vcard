@@ -79,7 +79,7 @@ const ChatModule: React.FC<Props> = ({ onClose, isDark }) => {
       <div className={`p-6 border-b border-white/10 flex items-center justify-between`}>
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
-            <img src="darshan.jpg" alt="Darshan" className="w-full h-full object-cover" />
+            <img src="images/darshan.jpg" alt="Darshan" className="w-full h-full object-cover" />
           </div>
           <div>
             <p className="text-[14px] font-black uppercase tracking-widest leading-none mb-1">Darshan N G</p>

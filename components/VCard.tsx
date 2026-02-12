@@ -144,7 +144,7 @@ const VCard: React.FC = () => {
       <nav className="relative z-[100] py-10">
         <div className="max-w-[500px] mx-auto px-10 flex justify-between items-center">
           <div className="w-24 h-24 p-2 rounded-full bg-white flex items-center justify-center shadow-xl">
-            <img src="logo.png" alt="SIPC Logo" className="w-[85%] h-[85%] object-contain" />
+            <img src="images/logo.png" alt="SIPC Logo" className="w-[85%] h-[85%] object-contain" />
           </div>
           <div className="flex space-x-3">
              <button 
@@ -172,7 +172,7 @@ const VCard: React.FC = () => {
         >
           <div className={`absolute -inset-10 rounded-full blur-3xl ${isDark ? 'bg-emerald-500/10' : 'bg-emerald-200/20'}`} />
           <div className={`relative w-40 h-40 rounded-full overflow-hidden border-2 shadow-2xl transition-colors duration-500 ${isDark ? 'border-white/10 bg-slate-900' : 'border-white bg-slate-100'}`}>
-            <img src="darshan.jpg" alt={CONTACT_INFO.name} className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-0" />
+            <img src="images/darshan.jpg" alt={CONTACT_INFO.name} className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-0" />
           </div>
         </motion.div>
 

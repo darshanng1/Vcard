@@ -31,7 +31,7 @@ const Booking: React.FC = () => {
         <Link to="/" className="text-[11px] font-black uppercase tracking-widest text-zinc-500">Cancel</Link>
         <span className="text-[11px] font-black uppercase tracking-[0.4em] text-emerald-500">Inspection Schedule</span>
         <div className="w-10 h-10 bg-white rounded-full p-1.5 flex items-center justify-center">
-          <img src="logo.png" className="w-full h-full object-contain" />
+          <img src="images/logo.png" className="w-full h-full object-contain" />
         </div>
       </nav>
 
