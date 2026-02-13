@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO, COMPANY_INFO, SERVICES } from '../constants';
-import logoImg from '../assets/images/SIPClogo.jpg';
-import logoImg from '../assets/images/SIPCLogo.jpg';
+import logoImg from "../assets/images/SIPCLogo.jpg";
+import profileImg from "../assets/images/Darshan.jpeg";
+
 
 const FloatingChat: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   const whatsappNumber = "8618764541";
