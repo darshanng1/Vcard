@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { COMPANY_INFO, SERVICES } from '../constants';
-import logo from '../assets/images/SIPClogo.jpg';
+import logo from "../assets/images/SIPCLogo.jpg";
+
 
 
 const PdfModule: React.FC<{ title: string }> = ({ title }) => {
