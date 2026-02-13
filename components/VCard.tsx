@@ -281,9 +281,19 @@ const VCard: React.FC = () => {
         </div>
       </footer>
 
-      <FloatingChat isDark={isDark} />
-    </div>
-  );
+{/* Scroll To Top */}
+<button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="fixed right-4 bottom-24 z-40 bg-slate-800 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center"
+>
+  ↑
+</button>
+
+<FloatingChat isDark={isDark} />
+</div>
+);
 };
 
 export default VCard;
+
+
