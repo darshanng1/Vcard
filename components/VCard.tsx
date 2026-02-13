@@ -123,7 +123,7 @@ const AnimatedServiceCard: React.FC<{ service: any; isDark: boolean }> = ({ serv
             {service.title}
           </p>
           <p className={`text-[9px] uppercase tracking-widest font-bold ${isDark ? 'text-slate-600' : 'text-slate-400'}`}>
-            Professional Care
+            Professional Services
           </p>
         </div>
       </motion.div>
