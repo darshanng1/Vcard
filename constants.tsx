@@ -36,8 +36,8 @@ export const COMPANY_INFO = {
 export const SERVICES: ServiceInfo[] = [
   {
     id: "cockroach",
-    title: "Cockroach Control",
-    slug: "cockroach-control-bengaluru",
+    title: "Cockroach Management",
+    slug: "cockroach-Management-bengaluru",
     description: "Integrated baiting and gel treatment for kitchens and dining areas.",
     problem: "Roaches spread E. coli and Salmonella.",
     inspection: "Detection of egg cases in pantry crevices.",
@@ -49,8 +49,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "rodent",
-    title: "Rodent Control",
-    slug: "rodent-control",
+    title: "Rodent Management",
+    slug: "rodent-Management",
     description: "Strategic baiting and entry proofing for rats and mice.",
     problem: "Rats contaminate food and cause electrical fires.",
     inspection: "Smudge marks and droppings indicate activity.",
@@ -75,8 +75,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "termite",
-    title: "Termite Treatment",
-    slug: "termite-treatment-bengaluru",
+    title: "Termite Management",
+    slug: "termite-Management-bengaluru",
     description: "Specialized drill-fill-seal barrier protection.",
     problem: "Termites are silent destroyers feeding on cellulose.",
     inspection: "Mud tubes and hollow-sounding wood.",
@@ -88,8 +88,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "wood-borer",
-    title: "Wood Borer Control",
-    slug: "wood-borer",
+    title: "Wood Borer Management",
+    slug: "wood-borer Management",
     description: "Injection treatment for powder-post beetles.",
     problem: "Wood borers turn solid wood into powder.",
     inspection: "Presence of fine frass and tiny exit holes.",
@@ -101,8 +101,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "bedbug",
-    title: "Bedbug Treatment",
-    slug: "bedbug-treatment",
+    title: "Bedbug Management",
+    slug: "bedbug-Management",
     description: "Intensive chemical misting and steam treatment.",
     problem: "Bedbugs feed on human blood causing welts.",
     inspection: "Blood spots on sheets and mattress seams.",
@@ -114,8 +114,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "ants",
-    title: "Ant Control",
-    slug: "ant-control",
+    title: "Ant Management",
+    slug: "ant-Management",
     description: "Perimeter treatment and gel baiting.",
     problem: "Ants contaminate food and damage components.",
     inspection: "Tracking worker trails back to mounds.",
@@ -127,8 +127,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "mosquito",
-    title: "Mosquito Control",
-    slug: "mosquito-control",
+    title: "Mosquito Management",
+    slug: "mosquito-Management",
     description: "Indoor and outdoor misting prevention.",
     problem: "Spread Dengue and Malaria.",
     inspection: "Identification of stagnant water sites.",
@@ -140,8 +140,8 @@ export const SERVICES: ServiceInfo[] = [
   },
   {
     id: "flies",
-    title: "Flies Control",
-    slug: "flies-control",
+    title: "Flies Management",
+    slug: "flies-Management",
     description: "Baiting and trap systems for food units.",
     problem: "Houseflies carry over 60 diseases.",
     inspection: "Locating breeding sites near waste bins.",
