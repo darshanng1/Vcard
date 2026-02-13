@@ -174,7 +174,8 @@ const VCard: React.FC = () => {
         >
           <div className={`absolute -inset-10 rounded-full blur-3xl ${isDark ? 'bg-emerald-500/10' : 'bg-emerald-200/20'}`} />
           <div className={`relative w-40 h-40 rounded-full overflow-hidden border-2 shadow-2xl transition-colors duration-500 ${isDark ? 'border-white/10 bg-slate-900' : 'border-white bg-slate-100'}`}>
-            <img src={profileImg} alt={CONTACT_INFO.name} className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-0" />
+           <img src={profileImg} alt={CONTACT_INFO.name} className="w-full h-full object-cover" />
+
    </div>
         </motion.div>
 
@@ -192,7 +193,7 @@ const VCard: React.FC = () => {
           <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center justify-center py-3.5 bg-emerald-600 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all text-white shadow-xl shadow-emerald-900/20">
             Call
           </a>
-          <a href="https://wa.me/8618764541" target="_blank" rel="noopener noreferrer" className={`flex items-center justify-center py-3.5 border rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all text-emerald-600 ${isDark ? 'bg-slate-900 border-white/5' : 'bg-white border-slate-200'}`}>
+          <a href="https://wa.me/9686407061" target="_blank" rel="noopener noreferrer" className={`flex items-center justify-center py-3.5 border rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all text-emerald-600 ${isDark ? 'bg-slate-900 border-white/5' : 'bg-white border-slate-200'}`}>
             WhatsApp
           </a>
           <a href={`mailto:${CONTACT_INFO.email}`} className={`flex items-center justify-center py-3.5 border rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all ${isDark ? 'bg-slate-900 border-white/5 text-white' : 'bg-white border-slate-200 text-slate-800'}`}>
@@ -246,17 +247,17 @@ const VCard: React.FC = () => {
         </h2>
 
         {/* Embedded Map */}
-        <div className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${isDark ? 'border-white/5' : 'border-slate-300'}`}>
-          <iframe
-            src={COMPANY_INFO.mapUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+<div className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${isDark ? 'border-white/5' : 'border-slate-300'}`}>
+  <iframe
+    src={COMPANY_INFO.mapUrl}
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen={true}
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
+
 
         {/* Company Profile Button */}
         <Link

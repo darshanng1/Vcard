@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SERVICES, CONTACT_INFO } from '../constants';
+import logo from '../assets/images/SIPCLogo.jpg';
 
 const Booking: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -31,7 +32,8 @@ const Booking: React.FC = () => {
         <Link to="/" className="text-[11px] font-black uppercase tracking-widest text-zinc-500">Cancel</Link>
         <span className="text-[11px] font-black uppercase tracking-[0.4em] text-emerald-500">Inspection Schedule</span>
         <div className="w-10 h-10 bg-white rounded-full p-1.5 flex items-center justify-center">
-          <img src="images/logo.png" className="w-full h-full object-contain" />
+          <img src={logo} alt="SIPC Logo" className="w-full h-full object-contain" />
+
         </div>
       </nav>
 

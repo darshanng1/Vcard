@@ -3,13 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { COMPANY_INFO, SERVICES } from '../constants';
+import logo from '../assets/images/SIPClogo.jpg';
+
 
 const PdfModule: React.FC<{ title: string }> = ({ title }) => {
   // We'll simulate the "pages" of the PDF as a rich vertical scroll
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 overflow-y-auto no-scrollbar pb-32">
       <div className="absolute inset-0 texture-structural opacity-10 pointer-events-none fixed" />
-      
+
       {/* 🧭 NAVIGATION */}
       <nav className="p-6 sticky top-0 bg-slate-950/80 backdrop-blur-xl z-50 flex items-center justify-between border-b border-white/5 shadow-lg">
         <Link to="/" className="inline-flex items-center text-slate-500 font-black text-[10px] uppercase tracking-[0.4em] hover:text-emerald-500 transition-colors">
@@ -21,11 +23,11 @@ const PdfModule: React.FC<{ title: string }> = ({ title }) => {
 
       {/* 📜 CONTENT */}
       <div className="max-w-[500px] mx-auto px-10 pt-16 space-y-24 relative z-10">
-        
+
         {/* PAGE 1: HERO */}
         <section className="text-center py-10">
           <div className="w-40 h-40 mx-auto p-4 bg-white rounded-full shadow-2xl mb-12 flex items-center justify-center">
-            <img src="images/logo.png" alt="SIPC Logo" className="w-full h-full object-contain" />
+           <img src={logo} alt="SIPC Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-heading text-4xl font-black text-white leading-tight mb-4 tracking-tighter">
             {COMPANY_INFO.name}
@@ -36,8 +38,8 @@ const PdfModule: React.FC<{ title: string }> = ({ title }) => {
         {/* DOWNLOAD BUTTON (Primary Action) */}
         <section className="bg-emerald-600/10 border border-emerald-500/20 p-8 rounded-3xl text-center">
           <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500 mb-6">Full Document Available</p>
-          <a 
-            href="images/company-profile.pdf" 
+          <a
+            href="images/company-profile.pdf"
             download="SIPC_Company_Profile.pdf"
             className="block w-full bg-emerald-600 text-white py-5 rounded-2xl text-center font-black text-xs uppercase tracking-widest shadow-xl active:scale-95 transition-all"
           >
