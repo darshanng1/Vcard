@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "src": "/SIPC_Company_Profile.pdf",
+      "headers": {
+        "Content-Type": "application/pdf"
+      },
+      "dest": "/SIPC_Company_Profile.pdf"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
