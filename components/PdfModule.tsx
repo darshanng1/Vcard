@@ -39,9 +39,10 @@ const PdfModule: React.FC<{ title: string }> = ({ title }) => {
         {/* DOWNLOAD BUTTON (Primary Action) */}
         <section className="bg-emerald-600/10 border border-emerald-500/20 p-8 rounded-3xl text-center">
           <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500 mb-6">Full Document Available</p>
-          <a
-            href="images/company-profile.pdf"
-            download="SIPC_Company_Profile.pdf"
+         <a
+  href="/SIPC_Company_Profile.pdf"
+  download
+
             className="block w-full bg-emerald-600 text-white py-5 rounded-2xl text-center font-black text-xs uppercase tracking-widest shadow-xl active:scale-95 transition-all"
           >
             Download PDF Profile

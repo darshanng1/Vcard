@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import VCard from './components/VCard';
 import Booking from './components/Booking';
 import ChatModule from './components/ChatModule';
@@ -12,7 +13,7 @@ import { SERVICES } from './constants';
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="app-container">
+      <Layout>
         <Routes>
           <Route path="/" element={<VCard />} />
           <Route path="/book" element={<Booking />} />
@@ -21,17 +22,17 @@ const App: React.FC = () => {
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
           <Route path="/blog" element={<Blog />} />
-          
+
           {/* SEO Dynamic Service Pages */}
           {SERVICES.map(s => (
-            <Route 
-              key={s.id} 
-              path={`/service/${s.slug}`} 
-              element={<ServicePage service={s} />} 
+            <Route
+              key={s.id}
+              path={`/service/${s.slug}`}
+              element={<ServicePage service={s} />}
             />
           ))}
         </Routes>
-      </div>
+      </Layout>
     </HashRouter>
   );
 };
