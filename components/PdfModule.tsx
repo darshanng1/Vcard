@@ -41,12 +41,18 @@ const PdfModule: React.FC<{ title: string }> = ({ title }) => {
           <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500 mb-6">Full Document Available</p>
         <button
   onClick={() => {
-    window.open("/SIPC_Company_Profile.pdf", "_blank");
+    const link = document.createElement("a");
+    link.href = "/SIPC_Company_Profile.pdf";
+    link.download = "SIPC_Company_Profile.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }}
   className="block w-full bg-emerald-600 text-white py-5 rounded-2xl text-center font-black text-xs uppercase tracking-widest shadow-xl active:scale-95 transition-all"
 >
   Download PDF Profile
 </button>
+
 
 
         </section>
