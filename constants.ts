@@ -246,7 +246,21 @@ Installation process:
 
 Areas covered in Bangalore:
 
-Whitefield, HSR Layout, Electronic City, Koramangala, Marathahalli, Hebbal, JP Nagar, Indiranagar and nearby locations.
+Areas covered across Bengaluru:
+
+North Bengaluru:
+Hebbal, Yelahanka, Jakkur, Thanisandra, Hennur, Kalyan Nagar, Nagavara, Sahakar Nagar, RT Nagar, Sanjaynagar, Kodigehalli, Vidyaranyapura, BEL Road, Ganga Nagar, Airport Road, Bagalur, Devanahalli, Neeladri Nagar, Byatarayanapura, Dollars Colony.
+
+East Bengaluru:
+Whitefield, KR Puram, Mahadevapura, Marathahalli, Brookefield, CV Raman Nagar, Hoodi, Bellandur, Kadubeesanahalli, Indiranagar, Domlur.
+
+South Bengaluru:
+HSR Layout, Electronic City, JP Nagar, BTM Layout, Jayanagar, Banashankari, Basavanagudi, Kanakapura Road, Sarjapur Road.
+
+West Bengaluru:
+Rajajinagar, Vijayanagar, Nagarbhavi, RR Nagar, Malleshwaram, Peenya, Yeshwanthpur.
+
+And all surrounding Bengaluru locations.
 
 Why professional installation matters:
 
