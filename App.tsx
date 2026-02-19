@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout';
 import VCard from './components/VCard';
@@ -15,7 +15,7 @@ import { SERVICES } from './constants';
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<VCard />} />
@@ -39,7 +39,7 @@ const App: React.FC = () => {
           ))}
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
