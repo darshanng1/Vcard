@@ -60,19 +60,49 @@ export const SERVICES: ServiceInfo[] = [
     faqs: [{ question: "Will they die inside?", answer: "We use baits that cause rodents to seek water outdoors." }],
     icon: "🐀"
   },
-  {
-    id: "bird-netting",
-    title: "Bird & Pigeon Netting",
-    slug: "pigeon-netting-bengaluru",
-    description: "High-tensile, UV-stabilized invisible netting.",
-    problem: "Pigeon droppings carry over 60 diseases and damage facades.",
-    inspection: "Nesting in balconies and AC ledges.",
-    method: "Installation of specialized translucent HDPE netting and spikes.",
-    safety: "Non-lethal and aesthetic-friendly.",
-    applications: ["Balconies", "Window Facades", "AC Ledges"],
-    faqs: [{ question: "Will it block my view?", answer: "No, mesh is translucent and becomes almost invisible." }],
-    icon: "🐦"
-  },
+
+    {
+  id: "bird-netting",
+  title: "Bird Netting in Bangalore – Pigeon Safety Net Installation",
+  slug: "bird-netting-bangalore",
+  description: "Professional balcony and pigeon safety net installation in Bangalore using high-tensile UV-stabilized invisible netting.",
+
+  problem:
+    "Pigeons create hygiene problems, droppings, foul smell, and nesting issues in balconies and AC ledges across Bangalore apartments.",
+
+  inspection:
+    "Site inspection identifies nesting zones, entry points, balcony gaps, and structural fixing positions before installation.",
+
+  method:
+    "Installation of premium translucent HDPE bird netting with strong edge anchoring, stainless steel hooks, and non-damaging fixing system for long-term protection.",
+
+  safety:
+    "100% non-lethal, bird-friendly, child-safe and aesthetic solution that does not block airflow or visibility.",
+
+  applications: [
+    "Balcony Bird Netting",
+    "Window Safety Net",
+    "AC Outdoor Unit Protection",
+    "Terrace Bird Control",
+    "Apartment Facades"
+  ],
+
+  faqs: [
+    {
+      question: "Will bird netting block my balcony view?",
+      answer:
+        "No. The net is translucent and nearly invisible from distance while effectively preventing pigeons from entering."
+    },
+    {
+      question: "How long does bird netting last?",
+      answer:
+        "UV-stabilized HDPE bird nets typically last several years in Bangalore weather conditions."
+    }
+  ],
+
+  icon: "🐦"
+},
+
   {
     id: "termite",
     title: "Termite Management",
@@ -166,14 +196,65 @@ export const SERVICES: ServiceInfo[] = [
   }
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
+ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
     slug: "why-pigeons-are-dangerous",
     category: "Corporate Insight",
     title: "Managing Avian Risks in Urban Commercial Spaces",
     date: "Jan 12, 2024",
-    excerpt: "Technical analysis of the structural and health impact of pigeon presence in Bengaluru high-rises.",
-    content: "Pigeons carry over 60 diseases. For businesses, this translates to health liability and maintenance costs..."
+    excerpt:
+      "Technical analysis of the structural and health impact of pigeon presence in Bengaluru high-rises.",
+    content:
+      "Pigeons carry over 60 diseases. For businesses, this translates to health liability and maintenance costs."
+  },
+
+  {
+    id: "2",
+    slug: "bird-netting-bangalore",
+    category: "Bird Control",
+    title: "Bird Netting in Bangalore - Balcony & Pigeon Safety Net Guide",
+    date: "Feb 19, 2026",
+    excerpt:
+      "Complete guide to bird netting installation in Bangalore for balconies and apartments.",
+    content: `
+Bird netting in Bangalore is one of the most effective solutions to protect balconies, apartments, and commercial buildings from pigeon problems. High-rise buildings in Bangalore often face pigeon nesting, droppings, foul smell, and hygiene issues.
+
+Why pigeons are a problem in Bangalore:
+
+Pigeons create health risks due to droppings, damage balconies and facades, and often build nests in AC outdoor units and open spaces.
+
+What is bird netting:
+
+Bird netting is a professional safety solution that prevents pigeons from entering balconies while maintaining airflow and visibility. UV-stabilized HDPE nets are strong, long-lasting, and safe for birds.
+
+Benefits of bird netting:
+
+- Nearly invisible appearance
+- Non-lethal and bird friendly
+- Safe for children and pets
+- Long lasting in Bangalore weather
+- Prevents nesting permanently
+
+Installation process:
+
+1. Site inspection and measurement
+2. Identification of entry points
+3. Stainless steel hook fixing
+4. Tight tension net installation
+5. Final safety check
+
+Areas covered in Bangalore:
+
+Whitefield, HSR Layout, Electronic City, Koramangala, Marathahalli, Hebbal, JP Nagar, Indiranagar and nearby locations.
+
+Why professional installation matters:
+
+Professional installation ensures proper fixing and durability. Poorly installed nets may sag or break.
+
+Final words:
+
+If you are looking for bird netting in Bangalore, professional pigeon safety net installation is the safest and most effective way to protect your balcony and maintain hygiene.
+`
   }
 ];
