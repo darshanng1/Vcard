@@ -199,14 +199,51 @@ export const SERVICES: ServiceInfo[] = [
  export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
-    slug: "why-pigeons-are-dangerous",
+    slug: "complete-guide-pigeon-netting-bengaluru",
     category: "Corporate Insight",
-    title: "Managing Avian Risks in Urban Commercial Spaces",
-    date: "Jan 12, 2024",
+    title: "Complete Guide to Pigeon Netting in Bengaluru Apartments & Commercial Buildings",
+    date: "Feb 21, 2026",
     excerpt:
-      "Technical analysis of the structural and health impact of pigeon presence in Bengaluru high-rises.",
-    content:
-      "Pigeons carry over 60 diseases. For businesses, this translates to health liability and maintenance costs."
+      "In-depth analysis of pigeon infestation risks in Bengaluru high-rises and why professional netting systems are the most effective long-term solution.",
+    content: `
+Pigeon infestation has become a widespread issue across Bengaluru’s rapidly expanding residential and commercial infrastructure. High-rise apartments, IT parks, and gated communities provide ideal nesting environments due to open balconies, service ducts, façade ledges, and HVAC outdoor units.
+
+For property owners and facility managers, pigeon presence is no longer a minor inconvenience. It represents a structural, financial, and health risk that requires preventive intervention rather than repetitive cleaning.
+
+Health & Compliance Risks:
+Pigeons are documented carriers of more than 60 transmissible diseases, including Histoplasmosis, Psittacosis, and Salmonella-related infections. Accumulated droppings in enclosed balconies and shafts create airborne fungal spores that may impact respiratory health, especially in children and elderly residents.
+
+Structural & Asset Damage:
+Pigeon droppings contain uric acid that corrodes metal railings, damages exterior paint coatings, blocks rainwater drainage outlets, and reduces the lifespan of AC outdoor units. Over time, repeated cleaning and repainting inflate maintenance budgets for apartment associations and commercial facilities.
+
+Why Cleaning Alone Is Not a Solution:
+Periodic washing only addresses visible waste. It does not prevent re-nesting. In Bengaluru’s climate, pigeon breeding cycles continue throughout the year, leading to recurring infestation unless a physical exclusion system is installed.
+
+Pigeon Netting as a Preventive Risk-Control System:
+Professional anti-bird netting provides a humane and long-term exclusion barrier. Unlike spikes or chemical repellents, netting blocks entry points without harming birds and ensures complete coverage of balconies, open shafts, and ledges.
+
+Types of Netting Used in Bengaluru Installations:
+1. UV-Stabilized Nylon Net – Suitable for residential balconies and medium exposure areas.
+2. HDPE Industrial Net – High-durability solution recommended for high-rise buildings and commercial complexes.
+
+Professional installation includes secure edge locking, industrial-grade hooks, UV-resistant fasteners, and precision tensioning to prevent sagging or gaps. Proper installation ensures durability of 3–5 years depending on exposure conditions.
+
+Areas Across Bengaluru Where Demand Is Increasing:
+North Bengaluru, Yelahanka, Hebbal, Thanisandra, Hennur, Whitefield, Sarjapur Road, KR Puram, Marathahalli, and Electronic City have seen rising demand for balcony pigeon netting due to dense vertical development.
+
+Cost Considerations (2026 Market Range):
+Balcony pigeon netting in Bengaluru typically ranges between ₹12–₹25 per sq.ft depending on height, accessibility, material type, and coverage area. Commercial projects require site inspection for precise quotation.
+
+Who Should Consider Immediate Installation:
+- Apartment owners facing recurring pigeon nesting
+- RWAs and facility managers
+- IT park maintenance teams
+- Warehouse and hospital administrators
+
+Early installation significantly reduces long-term structural repair expenses and hygiene risks. For property stakeholders in Bengaluru, professional pigeon netting is a preventive investment rather than a reactive expense.
+
+Scheduling a professional site evaluation ensures correct material selection and long-term protection against pigeon infestation.
+`
   },
 
   {
@@ -270,5 +307,473 @@ Final words:
 
 If you are looking for bird netting in Bangalore, professional pigeon safety net installation is the safest and most effective way to protect your balcony and maintain hygiene.
 `
-  }
-];
+  },
+
+
+{
+  id: "3",
+  slug: "pigeon-netting-bangalore-complete-guide",
+  category: "Bird Control",
+  title: "Pigeon Netting in Bangalore – Complete Balcony Safety & Bird Control Guide (2026)",
+  date: "Feb 21, 2026",
+  excerpt:
+    "Looking for professional pigeon netting in Bangalore? Learn about balcony protection, installation process, cost, materials, and long-term bird control solutions.",
+  content: `
+If you live in Bangalore and own an apartment with an open balcony, you have likely faced pigeon problems — droppings, nesting, unpleasant odor, and constant cleaning.
+
+Across areas like Hebbal, Whitefield, Yelahanka, Thanisandra, HSR Layout, Electronic City, and KR Puram, pigeon infestation has become increasingly common due to high-rise construction and open balcony designs.
+
+This guide explains everything about pigeon netting in Bangalore — why it is necessary, how it works, material options, installation methods, cost factors, and long-term benefits.
+
+----------------------------------------------------------------
+
+Why Pigeon Infestation Is Increasing in Bangalore
+
+Bangalore’s climate supports year-round breeding. Combined with vertical construction and balcony openings, it creates ideal nesting spots.
+
+Common problems residents report:
+
+• Droppings accumulating within days
+• Nests blocking rainwater outlets
+• AC outdoor units corroding
+• Balcony tiles permanently stained
+• Strong smell in enclosed spaces
+• Repeated cleaning expenses
+
+Pigeon droppings are acidic. Over time, they damage railings, grills, paint, and tiles.
+
+The real issue is not cleaning. It is prevention.
+
+----------------------------------------------------------------
+
+What Is Pigeon Netting?
+
+Pigeon netting is a physical exclusion system installed across balconies and open areas to block bird entry without harming them.
+
+Modern installations use UV-stabilized HDPE material that is:
+
+• Weather resistant
+• Durable for 3–5 years
+• Child-safe
+• Pet-safe
+• Nearly invisible from distance
+• Humane and eco-friendly
+
+Unlike spikes, which only prevent birds from sitting on edges, netting blocks full entry and nesting.
+
+----------------------------------------------------------------
+
+Why Balcony Netting Is Better Than Spikes or Repellents
+
+Bird Spikes:
+• Limited coverage
+• Do not block nesting
+• Can loosen over time
+
+Chemical Repellents:
+• Temporary
+• Require repeated application
+• Ineffective in heavy infestation
+
+Sound Devices:
+• Not practical in residential apartments
+
+Pigeon netting:
+• Full balcony coverage
+• Long-term solution
+• Minimal maintenance
+• Clean appearance
+
+----------------------------------------------------------------
+
+Installation Process in Bangalore Apartments
+
+Professional installation includes:
+
+1. Site inspection and measurement
+2. Identifying all open entry points
+3. Stainless steel hook anchoring
+4. Tensioned net placement
+5. Corner sealing
+6. Final safety inspection
+
+Proper tension prevents sagging and ensures durability.
+
+----------------------------------------------------------------
+
+Cost of Pigeon Netting in Bangalore (2026)
+
+Pricing typically ranges between ₹12 – ₹25 per sq.ft depending on:
+
+• Balcony size
+• Height of building
+• Accessibility
+• Net material type
+• Installation complexity
+
+High-rise buildings may require additional safety precautions.
+
+A proper site visit ensures accurate quotation.
+
+----------------------------------------------------------------
+
+Areas in Bangalore Where Demand Is High
+
+North Bangalore:
+Hebbal, Yelahanka, Thanisandra, Hennur, Jakkur
+
+East Bangalore:
+Whitefield, KR Puram, Marathahalli, Mahadevapura
+
+South Bangalore:
+HSR Layout, Electronic City, JP Nagar, BTM Layout
+
+West Bangalore:
+Rajajinagar, Vijayanagar, RR Nagar
+
+High-rise apartments in these regions frequently require pigeon net installation.
+
+----------------------------------------------------------------
+
+Frequently Asked Questions
+
+How long does pigeon netting last?
+3–5 years depending on exposure and installation quality.
+
+Does it block sunlight?
+No. Quality nets allow airflow and natural light.
+
+Is it safe for children?
+Yes. Installed nets are strong and securely anchored.
+
+----------------------------------------------------------------
+
+Final Thoughts
+
+If pigeon infestation is recurring in your balcony, cleaning alone will not solve the issue permanently.
+
+Professional pigeon netting in Bangalore provides a safe, long-term, and cost-effective solution to protect your home from structural damage and hygiene issues.
+
+For service availability and site inspection, contact for installation support in your area.
+`
+},
+{
+  id: "4",
+  slug: "professional-bird-control-solutions-bangalore",
+  category: "Bird Control",
+  title: "Professional Bird Control Solutions in Bangalore – Structured Inspection, Netting & Bird Spike Installation",
+  date: "Feb 21, 2026",
+  excerpt:
+    "A detailed overview of how professional bird control is executed in Bangalore apartments and commercial buildings, including inspection methodology, pigeon netting systems, and bird spike installation.",
+  content: `
+In Bangalore’s rapidly expanding residential and commercial skyline, bird infestation has become a recurring structural challenge. High-rise balconies, ledges, HVAC platforms, and service ducts provide ideal nesting points for pigeons and other urban birds.
+
+Effective bird control is not simply about installing a net. It requires structural assessment, entry-point analysis, and selecting the correct exclusion method based on architecture and usage patterns.
+
+This guide explains how professional bird control solutions are structured and executed in Bangalore properties.
+
+----------------------------------------------------------------
+
+Step 1: Structural Inspection & Risk Analysis
+
+Every property is different.
+
+Before recommending pigeon netting or bird spikes, a professional inspection evaluates:
+
+• Balcony dimensions and openness
+• Height and wind exposure
+• Existing nesting behavior
+• Entry angles and ledge depth
+• AC outdoor placement
+• Drainage alignment
+• Building facade structure
+
+Many installations fail because they skip this step.
+
+Understanding the bird movement pattern is critical. Birds return to habitual nesting spots. The goal is to block access strategically without damaging structure or aesthetics.
+
+----------------------------------------------------------------
+
+Step 2: Choosing the Right Bird Control System
+
+There is no one-size-fits-all solution.
+
+Depending on the structure, we typically recommend:
+
+1. Pigeon Netting Systems
+2. Bird Spikes
+3. Combination Installations
+
+Pigeon Netting is ideal for:
+
+• Open balconies
+• Service ducts
+• High-rise apartments
+• Large open voids
+
+Bird Spikes are suitable for:
+
+• Narrow ledges
+• AC compressor tops
+• Signboards
+• Window sills
+• Pipe lines
+
+In many Bangalore buildings, a hybrid approach delivers the best results.
+
+----------------------------------------------------------------
+
+Pigeon Netting – Technical Overview
+
+Modern netting systems use UV-stabilized HDPE material designed for:
+
+• Weather resistance in Bangalore climate
+• High tensile strength
+• Minimal visual obstruction
+• Long operational lifespan
+
+Installation involves:
+
+• Stainless steel hook anchoring
+• Precision corner locking
+• Balanced tensioning
+• Edge sealing to prevent gaps
+
+Proper tension is essential. Loose nets sag and compromise structural appearance.
+
+----------------------------------------------------------------
+
+Bird Spike Installation – Precision Application
+
+Bird spikes are not randomly placed.
+
+Professional installation considers:
+
+• Ledge width
+• Bird landing patterns
+• Drainage path
+• Wind direction
+
+Stainless steel or polycarbonate spikes are used depending on exposure.
+
+Spikes are highly effective in preventing perching but must be positioned accurately to avoid leaving small landing gaps.
+
+----------------------------------------------------------------
+
+Commercial & High-Rise Applications
+
+In commercial buildings, bird presence affects:
+
+• Brand image
+• Hygiene standards
+• Maintenance budgets
+• HVAC efficiency
+
+For IT parks, hospitals, warehouses, and apartment complexes in Bangalore, structured bird control reduces long-term maintenance overhead.
+
+----------------------------------------------------------------
+
+Common Mistakes in DIY Installations
+
+• Using low-quality materials
+• Improper hook placement
+• Uneven tension
+• Partial coverage
+• Ignoring corner sealing
+
+These lead to re-entry and repeated infestation.
+
+Bird control must be preventive, not reactive.
+
+----------------------------------------------------------------
+
+Long-Term Structural Protection
+
+Over time, pigeon droppings corrode:
+
+• Metal railings
+• AC outdoor units
+• External paint
+• Balcony flooring
+
+Preventive exclusion systems protect structural integrity and reduce repeated cleaning expenses.
+
+----------------------------------------------------------------
+
+Areas Served in Bangalore
+
+Bird control services are commonly required across:
+
+North Bangalore:
+Hebbal, Yelahanka, Thanisandra, Hennur
+
+East Bangalore:
+Whitefield, KR Puram, Marathahalli
+
+South Bangalore:
+HSR Layout, Electronic City, JP Nagar
+
+West Bangalore:
+Rajajinagar, Vijayanagar, RR Nagar
+
+High-rise apartments and commercial buildings in these areas frequently require structured bird control solutions.
+
+----------------------------------------------------------------
+
+Professional Approach Matters
+
+Effective bird control is about understanding structure, not just installing materials.
+
+A properly executed system:
+
+• Prevents re-nesting
+• Maintains aesthetics
+• Ensures durability
+• Minimizes maintenance
+• Protects property value
+
+For structured bird control assessment and installation support in Bangalore, site evaluation ensures the correct solution is implemented based on building design and exposure conditions.
+`
+},
+{
+  id: "31",
+  slug: "balcony-bird-net-installation-bangalore",
+  category: "Bird Control",
+  title: "Balcony Bird Net Installation in Bangalore – Complete Pigeon Prevention Guide",
+  date: "Feb 21, 2026",
+  excerpt:
+    "Expert guide to balcony bird net installation in Bangalore apartments. Learn how professional pigeon prevention systems protect your home long-term.",
+  content: `
+Balconies are the most common entry point for pigeon infestation in Bangalore apartments.
+
+Open designs, railing gaps, AC outdoor units, and nearby ledges make balconies ideal nesting spots. Once pigeons start nesting, the problem escalates quickly — droppings accumulate, odor develops, and repeated cleaning becomes exhausting.
+
+Balcony bird net installation is one of the most effective long-term prevention methods used across Bangalore’s high-rise residential buildings.
+
+----------------------------------------------------------------
+
+Why Balconies Attract Pigeons
+
+In urban areas like Hebbal, Whitefield, Yelahanka, HSR Layout, and Electronic City, vertical construction creates multiple resting ledges for birds.
+
+Balconies offer:
+
+• Shelter from rain
+• Stable surfaces for nesting
+• Access to AC outdoor warmth
+• Protection from predators
+
+Once pigeons identify a safe balcony, they repeatedly return.
+
+----------------------------------------------------------------
+
+What Is Balcony Bird Net Installation?
+
+Balcony bird net installation involves covering the open balcony area with UV-stabilized netting material that blocks entry without harming birds.
+
+The system is designed to:
+
+• Prevent nesting
+• Maintain airflow
+• Preserve natural light
+• Keep balcony usable
+• Maintain clean exterior appearance
+
+Unlike temporary deterrents, properly installed netting prevents re-entry entirely.
+
+----------------------------------------------------------------
+
+Technical Installation Process
+
+Professional balcony net installation includes:
+
+1. Measurement of full balcony opening
+2. Identification of micro-gaps in corners
+3. Stainless steel hook anchoring
+4. Tight tension net alignment
+5. Edge sealing to prevent entry
+
+Proper corner locking is critical. Most failures occur due to small corner gaps left during installation.
+
+----------------------------------------------------------------
+
+Material Used in Bangalore Installations
+
+High-quality installations use:
+
+• UV-stabilized HDPE net
+• Rust-resistant fasteners
+• Strong anchoring hooks
+• Balanced tension placement
+
+The material is designed to withstand Bangalore’s climate — including heat, rainfall, and wind exposure.
+
+----------------------------------------------------------------
+
+Common Mistakes in Balcony Net Installation
+
+• Loose net tension
+• Weak anchoring
+• Using low-quality material
+• Leaving AC unit gaps uncovered
+• Ignoring drainage access
+
+These mistakes allow pigeons to return within months.
+
+----------------------------------------------------------------
+
+Why Professional Installation Matters
+
+A properly installed balcony bird net:
+
+• Prevents long-term structural damage
+• Reduces cleaning frequency
+• Protects AC outdoor units
+• Maintains hygiene
+• Enhances balcony usability
+
+In high-rise apartments across Bangalore, preventive installation significantly reduces recurring maintenance costs.
+
+----------------------------------------------------------------
+
+Areas in Bangalore with High Balcony Net Demand
+
+North Bangalore:
+Hebbal, Thanisandra, Yelahanka, Hennur
+
+East Bangalore:
+Whitefield, KR Puram, Marathahalli
+
+South Bangalore:
+HSR Layout, Electronic City, JP Nagar
+
+West Bangalore:
+Rajajinagar, RR Nagar, Vijayanagar
+
+Balcony netting is especially common in newly constructed apartment complexes in these areas.
+
+----------------------------------------------------------------
+
+Frequently Asked Questions
+
+Will balcony net block view?
+No. High-quality nets are nearly invisible from a distance.
+
+Is it safe for children?
+Yes. Professional installations are securely anchored.
+
+How long does balcony netting last?
+Typically 3–5 years depending on exposure and maintenance.
+
+----------------------------------------------------------------
+
+Final Thoughts
+
+Balcony bird net installation in Bangalore is not just about convenience — it is about structural protection and long-term hygiene management.
+
+If pigeon nesting is recurring in your apartment balcony, preventive exclusion is the most reliable solution.
+
+For professional balcony bird net installation support in Bangalore, site inspection ensures the correct system is applied based on your building structure.
+`
+},
+]
