@@ -241,6 +241,24 @@ const VCard: React.FC = () => {
         ))}
       </section>
 
+            {/* 📰 Blog Section */}
+      <section className="px-10 py-10 z-10 flex flex-col items-center">
+        <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+          Latest Blog
+        </h3>
+
+        <a
+          href="/blog/bird-netting-bangalore/"
+          className={`w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
+            isDark
+              ? 'bg-emerald-600 text-white border-emerald-600'
+              : 'bg-emerald-500 text-white border-emerald-500'
+          }`}
+        >
+          Balcony Bird Net Installation in Bangalore
+        </a>
+      </section>
+
       {/* 📞 Contact Us Section (Immediate Transition) */}
       <section className="px-10 py-12 z-10 flex flex-col items-center">
         <h2 className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
