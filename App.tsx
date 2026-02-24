@@ -8,8 +8,6 @@ import ChatModule from './components/ChatModule';
 import PdfModule from './components/PdfModule';
 import UploadModule from './components/UploadModule';
 import ServicePage from './components/ServicePage';
-import Blog from './components/Blog';
-import BlogPost from './components/BlogPost';
 
 import { SERVICES } from './constants';
 
