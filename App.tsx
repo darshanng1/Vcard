@@ -16,16 +16,16 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
+
+          {/* MAIN VCARD */}
           <Route path="/" element={<VCard />} />
+
+          {/* OTHER MODULES */}
           <Route path="/book" element={<Booking />} />
           <Route path="/chat" element={<ChatModule />} />
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
-
-          {/* BLOG */}
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
 
           {/* SERVICES */}
           {SERVICES.map((s) => (
@@ -35,6 +35,7 @@ const App: React.FC = () => {
               element={<ServicePage service={s} />}
             />
           ))}
+
         </Routes>
       </Layout>
     </BrowserRouter>
