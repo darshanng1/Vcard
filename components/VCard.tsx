@@ -275,7 +275,22 @@ const VCard: React.FC = () => {
     allowFullScreen={true}
     referrerPolicy="no-referrer-when-downgrade"
   />
-</div>
+</div><a
+  href="/blog/pre-construction-termite-treatment-bengaluru/"
+  style={{
+    display: "block",
+    marginTop: "15px",
+    padding: "14px",
+    backgroundColor: "#16a34a",
+    color: "#fff",
+    textAlign: "center",
+    borderRadius: "10px",
+    textDecoration: "none",
+    fontWeight: "bold"
+  }}
+>
+  PRE CONSTRUCTION TERMITE TREATMENT IN BENGALURU
+</a>
 
 
         {/* Company Profile Button */}
