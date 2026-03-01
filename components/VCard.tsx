@@ -245,20 +245,40 @@ const VCard: React.FC = () => {
       <section className="px-10 py-10 z-10 flex flex-col items-center">
         <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
           Latest Blog
-        </h3>
+        {/* 📰 Blog Section */}
+<section className="px-10 py-10 z-10 flex flex-col items-center">
+  <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+    Latest Blog
+  </h3>
 
-        <a
-          href="/blog/bird-netting-bangalore/"
-          className={`w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
-            isDark
-              ? 'bg-emerald-600 text-white border-emerald-600'
-              : 'bg-emerald-500 text-white border-emerald-500'
-          }`}
-        >
-          Balcony Bird Net Installation in Bangalore
-        </a>
-      </section>
+  <div className="w-full max-w-[400px] space-y-4">
 
+    {/* Bird Net Blog */}
+    <a
+      href="/blog/bird-netting-bangalore/"
+      className={`w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
+        isDark
+          ? 'bg-emerald-600 text-white border-emerald-600'
+          : 'bg-emerald-500 text-white border-emerald-500'
+      }`}
+    >
+      Balcony Bird Net Installation in Bangalore
+    </a>
+
+    {/* Termite Blog */}
+    <a
+      href="/blog/pre-construction-termite-treatment-bengaluru/"
+      className={`w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
+        isDark
+          ? 'bg-slate-900 text-white border-white/10'
+          : 'bg-white text-slate-900 border-slate-300'
+      }`}
+    >
+      Pre Construction Termite Treatment in Bengaluru
+    </a>
+
+  </div>
+</section>
       {/* 📞 Contact Us Section (Immediate Transition) */}
       <section className="px-10 py-12 z-10 flex flex-col items-center">
         <h2 className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
@@ -275,22 +295,7 @@ const VCard: React.FC = () => {
     allowFullScreen={true}
     referrerPolicy="no-referrer-when-downgrade"
   />
-</div><a
-  href="/blog/pre-construction-termite-treatment-bengaluru/"
-  style={{
-    display: "block",
-    marginTop: "15px",
-    padding: "14px",
-    backgroundColor: "#16a34a",
-    color: "#fff",
-    textAlign: "center",
-    borderRadius: "10px",
-    textDecoration: "none",
-    fontWeight: "bold"
-  }}
->
-  PRE CONSTRUCTION TERMITE TREATMENT IN BENGALURU
-</a>
+</div>
 
 
         {/* Company Profile Button */}
