@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import { CONTACT_INFO, COMPANY_INFO, SERVICES } from '../constants';
 import logoImg from "../assets/images/SIPCLogo.jpg";
 import profileImg from "../assets/images/Darshan.jpeg";
-
+import bird1 from "../assets/images/blog/bird1.jpg";
+import bird2 from "../assets/images/blog/bird2.jpg";
+import bird3 from "../assets/images/blog/bird3.jpg";
+import bird4 from "../assets/images/blog/bird4.jpg";
 
 const FloatingChat: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   const whatsappNumber = "8618764541";
@@ -249,6 +252,40 @@ const VCard: React.FC = () => {
           />
         ))}
       </section>
+      {/* 🖼 Bird Net Installation Gallery */}
+<section className="px-10 py-12 z-10">
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 text-center">
+    Recent Bird Net Installations
+  </h3>
+
+  <div className="grid grid-cols-1 gap-6 max-w-[400px] mx-auto">
+
+    <img
+      src={bird1}
+      alt="Balcony Bird Net Installation Bangalore"
+      className="rounded-2xl shadow-2xl w-full object-cover"
+    />
+
+    <img
+      src={bird2}
+      alt="Pigeon Net Installation Bangalore"
+      className="rounded-2xl shadow-2xl w-full object-cover"
+    />
+
+    <img
+      src={bird3}
+      alt="Apartment Bird Net Service Bangalore"
+      className="rounded-2xl shadow-2xl w-full object-cover"
+    />
+
+    <img
+      src={bird4}
+      alt="Residential Bird Net Bangalore"
+      className="rounded-2xl shadow-2xl w-full object-cover"
+    />
+
+  </div>
+</section>
 
       {/* 📰 Blog Section */}
       <section className="px-10 py-10 z-10 flex flex-col items-center">
