@@ -231,111 +231,137 @@ const VCard: React.FC = () => {
         </div>
       </section>
 
-      {/* 🪳 Services List */}
+            {/* 🪳 Services List */}
       <section className="px-10 mb-0 z-10 space-y-4">
-        <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+        <h3
+          className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${
+            isDark ? 'text-white' : 'text-slate-900'
+          }`}
+        >
           Pest & Bird Netting Services
         </h3>
+
         {SERVICES.map(service => (
-          <AnimatedServiceCard key={service.id} service={service} isDark={isDark} />
+          <AnimatedServiceCard
+            key={service.id}
+            service={service}
+            isDark={isDark}
+          />
         ))}
       </section>
 
-            {/* 📰 Blog Section */}
+      {/* 📰 Blog Section */}
       <section className="px-10 py-10 z-10 flex flex-col items-center">
-        <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-         {/* 📰 Blog Section */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
-  <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-    Latest Blog
-  {/* 📰 Blog Section */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
-    Latest Blog
-  {/* 📰 Blog Section */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
-  <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-    Latest Blog
-  </h3>
+        <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
+          Latest Blog
+        </h3>
 
-  {/* Bird Net Blog */}
-  <a
-    href="/blog/bird-netting-bangalore/"
-    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 mb-4"
-  >
-    Balcony Bird Net Installation in Bangalore
-  </a>
+        <div className="w-full max-w-[400px] space-y-4">
 
-  {/* Pre Construction Termite */}
-  <a
-    href="/blog/pre-construction-termite-treatment-bengaluru/"
-    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 mb-4"
-  >
-    Pre Construction Termite Treatment in Bengaluru
-  </a>
+          <a
+            href="/blog/bird-netting-bangalore/"
+            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
+          >
+            Balcony Bird Net Installation in Bangalore
+          </a>
 
-  {/* Post Construction Termite */}
-  <a
-    href="/blog/post-construction-termite-treatment-bengaluru/"
-    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
-  >
-    Post Construction Termite Treatment in Bengaluru
-  </a>
+          <a
+            href="/blog/pre-construction-termite-treatment-bengaluru/"
+            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
+          >
+            Pre Construction Termite Treatment in Bengaluru
+          </a>
 
-</section>
-      {/* 📞 Contact Us Section (Immediate Transition) */}
+          <a
+            href="/blog/post-construction-termite-treatment-bengaluru/"
+            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
+          >
+            Post Construction Termite Treatment in Bengaluru
+          </a>
+
+        </div>
+      </section>
+
+      {/* 📞 Contact Us Section */}
       <section className="px-10 py-12 z-10 flex flex-col items-center">
-        <h2 className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
+        <h2
+          className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${
+            isDark ? 'text-white' : 'text-slate-900'
+          }`}
+        >
           CONTACT US
         </h2>
 
         {/* Embedded Map */}
-<div className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${isDark ? 'border-white/5' : 'border-slate-300'}`}>
-  <iframe
-    src={COMPANY_INFO.mapUrl}
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen={true}
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
-
+        <div
+          className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${
+            isDark ? 'border-white/5' : 'border-slate-300'
+          }`}
+        >
+          <iframe
+            src={COMPANY_INFO.mapUrl}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
         {/* Company Profile Button */}
         <Link
           to="/rate-card"
-          className={`w-full max-w-[320px] flex items-center justify-center py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-lg border-2 mb-10 ${isDark ? 'bg-slate-900 text-white border-white/10' : 'bg-slate-200 text-slate-800 border-slate-300'}`}
+          className={`w-full max-w-[320px] flex items-center justify-center py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-lg border-2 mb-10 ${
+            isDark
+              ? 'bg-slate-900 text-white border-white/10'
+              : 'bg-slate-200 text-slate-800 border-slate-300'
+          }`}
         >
           📄 Company Profile
         </Link>
       </section>
 
       {/* Address & Footer */}
-      <footer className={`py-16 text-center relative z-10 transition-colors duration-500 ${isDark ? 'bg-slate-950/80 border-t border-white/5' : 'bg-slate-200/80 border-t border-slate-300'}`}>
-        <p className={`text-[10px] font-black uppercase tracking-[0.4em] px-14 mb-10 leading-relaxed ${isDark ? 'text-slate-700' : 'text-slate-500'}`}>
+      <footer
+        className={`py-16 text-center relative z-10 transition-colors duration-500 ${
+          isDark
+            ? 'bg-slate-950/80 border-t border-white/5'
+            : 'bg-slate-200/80 border-t border-slate-300'
+        }`}
+      >
+        <p
+          className={`text-[10px] font-black uppercase tracking-[0.4em] px-14 mb-10 leading-relaxed ${
+            isDark ? 'text-slate-700' : 'text-slate-500'
+          }`}
+        >
           {COMPANY_INFO.address}
         </p>
+
         <div className="mb-4">
-          <a href="https://sipc.in/" target="_blank" rel="noopener noreferrer" className={`text-sm font-black tracking-[0.2em] underline decoration-2 underline-offset-8 transition-colors ${isDark ? 'text-emerald-500' : 'text-slate-800'}`}>
+          <a
+            href="https://sipc.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-sm font-black tracking-[0.2em] underline decoration-2 underline-offset-8 transition-colors ${
+              isDark ? 'text-emerald-500' : 'text-slate-800'
+            }`}
+          >
             HTTPS://SIPC.IN/
           </a>
         </div>
       </footer>
 
-{/* Scroll To Top */}
-<button
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="fixed right-4 bottom-24 z-40 bg-slate-800 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center"
->
-  ↑
-</button>
+      {/* Scroll To Top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed right-4 bottom-24 z-40 bg-slate-800 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center"
+      >
+        ↑
+      </button>
 
-<FloatingChat isDark={isDark} />
-</div>
-);
+            <FloatingChat isDark={isDark} />
+    </div>
+  );
 };
 
 export default VCard;
-
-
