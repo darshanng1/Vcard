@@ -264,15 +264,15 @@ const VCard: React.FC = () => {
 
   {/* Termite Blog */}
   <a
-    href="/blog/pre-construction-termite-treatment-bengaluru/"
-    className={`w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
-      isDark
-        ? 'bg-emerald-600 text-white border-emerald-600'
-        : 'bg-emerald-500 text-white border-emerald-500'
-    }`}
-  >
-    Pre Construction Termite Treatment in Bengaluru
-  </a>
+  href="/blog/pre-construction-termite-treatment-bengaluru/"
+  className={`w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest active:scale-95 transition-all shadow-xl border-2 ${
+    isDark
+      ? 'bg-emerald-600 text-white border-emerald-600'
+      : 'bg-emerald-500 text-white border-emerald-500'
+  }`}
+>
+  Pre Construction Termite Treatment in Bengaluru
+</a>
 </section>
 
       {/* 📞 Contact Us Section (Immediate Transition) */}
