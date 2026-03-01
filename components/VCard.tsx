@@ -240,12 +240,7 @@ const VCard: React.FC = () => {
           <AnimatedServiceCard key={service.id} service={service} isDark={isDark} />
         ))}
       </section>
-
-            {/* 📰 Blog Section */}
-      <section className="px-10 py-10 z-10 flex flex-col items-center">
-        <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-          Latest Blog
-        {/* 📰 Blog Section */}
+     {/* 📰 Blog Section */}
 <section className="px-10 py-10 z-10 flex flex-col items-center">
   <h3 className={`text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 ${isDark ? 'text-white' : 'text-slate-900'}`}>
     Latest Blog
@@ -279,6 +274,7 @@ const VCard: React.FC = () => {
 
   </div>
 </section>
+
       {/* 📞 Contact Us Section (Immediate Transition) */}
       <section className="px-10 py-12 z-10 flex flex-col items-center">
         <h2 className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
