@@ -12,7 +12,7 @@ export const CONTACT_INFO: ContactData = {
 };
 
 export const COMPANY_INFO = {
-  name: "Secure India Pest Control Pvt Ltd",
+  name: "Sequre India Pest Control Pvt Ltd",
   shortName: "SIPC India",
   website: "sipc.in",
   fullUrl: "https://sipc.in/",

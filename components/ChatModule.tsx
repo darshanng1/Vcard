@@ -56,7 +56,7 @@ const ChatModule: React.FC<Props> = ({ onClose, isDark }) => {
           { role: 'user', parts: [{ text: userMessage }] }
         ],
         config: {
-          systemInstruction: `You are Darshan N G, Business Development Manager at Secure India Pest Control Pvt Ltd (SIPC India). 
+          systemInstruction: `You are Darshan N G, Business Development Manager at Sequre India Pest Control Pvt Ltd (SIPC India).
           Location: SIG Building, Dooravani Nagar, Bengaluru.
           Core Services: Termite protection, Bird Netting, General Pest Control, and Snake Entry Management.
           Tone: Professional, expert, and helpful.
