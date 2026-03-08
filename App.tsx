@@ -12,16 +12,14 @@ import ServicePage from './components/ServicePage';
 import { SERVICES } from './constants';
 
 const BlogRedirect = () => {
-  window.location.replace("/blog/");
+  window.location.href = "/blog/";
   return null;
 };
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-
       <Routes>
-
         <Route element={<Layout />}>
 
           <Route path="/" element={<VCard />} />
@@ -31,7 +29,7 @@ const App: React.FC = () => {
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
 
-          {/* THIS LINE FIXES YOUR ISSUE */}
+          {/* THIS FIXES YOUR ISSUE */}
           <Route path="/blog" element={<BlogRedirect />} />
 
           {SERVICES.map((s) => (
@@ -43,9 +41,7 @@ const App: React.FC = () => {
           ))}
 
         </Route>
-
       </Routes>
-
     </BrowserRouter>
   );
 };
