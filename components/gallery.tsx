@@ -1,8 +1,9 @@
 import React from "react";
 
-import bird1 from "../assets/images/gallery/bird1.jpg";
-import bird2 from "../assets/images/gallery/bird2.jpg";
-import bird3 from "../assets/images/gallery/bird3.jpg";
+import bird1 from "../assets/images/blog/bird1.jpg";
+import bird2 from "../assets/images/blog/bird2.jpg";
+import bird3 from "../assets/images/blog/bird3.jpg";
+import bird4 from "../assets/images/blog/bird4.jpg";
 
 const Gallery = () => {
 

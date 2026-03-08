@@ -252,7 +252,7 @@ const VCard: React.FC = () => {
           />
         ))}
       </section>
-     {/* 📂 Media Hub */}
+    {/* 📂 Media Hub */}
 <section className="px-10 py-10 z-10 flex flex-col items-center space-y-4">
 
   <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-4 opacity-60">
@@ -279,16 +279,6 @@ const VCard: React.FC = () => {
   >
     📰 View Blog Articles
   </Link>
-
-</section>
-  <a
-    href="https://darshanngsipcvcard.pages.dev/blog/"
-    target="_self"
-    rel="noopener noreferrer"
-    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
-  >
-    View All Blog Articles
-  </a>
 
 </section>
 
@@ -331,7 +321,7 @@ const VCard: React.FC = () => {
 
 </section>
 
-{/* Address & Footer */}
+{/* Footer */}
 <footer
   className={`py-16 text-center relative z-10 transition-colors duration-500 ${
     isDark
