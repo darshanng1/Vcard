@@ -293,8 +293,10 @@ const VCard: React.FC = () => {
     Latest Blog
   </h3>
 
-  <button
-  onClick={() => window.location.assign("/blog/")}
+ <button
+  onClick={() => {
+    window.location.href = "/blog/";
+  }}
   className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
 >
   View All Blog Articles
