@@ -8,26 +8,28 @@ import ChatModule from './components/ChatModule';
 import PdfModule from './components/PdfModule';
 import UploadModule from './components/UploadModule';
 import ServicePage from './components/ServicePage';
+import Blog from './components/Blog';
 
 import { SERVICES } from './constants';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
 
-          {/* MAIN VCARD */}
+      <Routes>
+
+        <Route element={<Layout />}>
+
           <Route path="/" element={<VCard />} />
-
-          {/* OTHER MODULES */}
           <Route path="/book" element={<Booking />} />
           <Route path="/chat" element={<ChatModule />} />
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
 
-          {/* SERVICES */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Blog />} />
+
           {SERVICES.map((s) => (
             <Route
               key={s.id}
@@ -36,8 +38,10 @@ const App: React.FC = () => {
             />
           ))}
 
-        </Routes>
-      </Layout>
+        </Route>
+
+      </Routes>
+
     </BrowserRouter>
   );
 };

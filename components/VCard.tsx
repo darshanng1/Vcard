@@ -286,119 +286,103 @@ const VCard: React.FC = () => {
 
   </div>
 </section>
+{/* 📰 Blog Section */}
+<section className="px-10 py-10 z-10 flex flex-col items-center">
 
-      {/* 📰 Blog Section */}
-      <section className="px-10 py-10 z-10 flex flex-col items-center">
-        <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
-          Latest Blog
-        </h3>
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
+    Latest Blog
+  </h3>
 
-        <div className="w-full max-w-[400px] space-y-4">
+  <Link
+    to="/blog"
+    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
+  >
+    View All Blog Articles
+  </Link>
 
-          <a
-            href="/blog/bird-netting-bangalore/"
-            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
-          >
-            Balcony Bird Net Installation in Bangalore
-          </a>
+</section>
 
-          <a
-            href="/blog/pre-construction-termite-treatment-bengaluru/"
-            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
-          >
-            Pre Construction Termite Treatment in Bengaluru
-          </a>
 
-          <a
-            href="/blog/post-construction-termite-treatment-bengaluru/"
-            className="w-full flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600"
-          >
-            Post Construction Termite Treatment in Bengaluru
-          </a>
+{/* 📞 Contact Us Section */}
+<section className="px-10 py-12 z-10 flex flex-col items-center">
 
-        </div>
-      </section>
+  <h2 className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${
+    isDark ? 'text-white' : 'text-slate-900'
+  }`}>
+    CONTACT US
+  </h2>
 
-      {/* 📞 Contact Us Section */}
-      <section className="px-10 py-12 z-10 flex flex-col items-center">
-        <h2
-          className={`text-2xl font-black uppercase tracking-[0.4em] mb-10 text-center ${
-            isDark ? 'text-white' : 'text-slate-900'
-          }`}
-        >
-          CONTACT US
-        </h2>
+  <div className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${
+    isDark ? 'border-white/5' : 'border-slate-300'
+  }`}>
+    <iframe
+      src={COMPANY_INFO.mapUrl}
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
 
-        {/* Embedded Map */}
-        <div
-          className={`w-full h-64 rounded-3xl overflow-hidden shadow-2xl mb-10 border ${
-            isDark ? 'border-white/5' : 'border-slate-300'
-          }`}
-        >
-          <iframe
-            src={COMPANY_INFO.mapUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+  <Link
+    to="/rate-card"
+    className={`w-full max-w-[320px] flex items-center justify-center py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-lg border-2 mb-10 ${
+      isDark
+        ? 'bg-slate-900 text-white border-white/10'
+        : 'bg-slate-200 text-slate-800 border-slate-300'
+    }`}
+  >
+    📄 Company Profile
+  </Link>
 
-        {/* Company Profile Button */}
-        <Link
-          to="/rate-card"
-          className={`w-full max-w-[320px] flex items-center justify-center py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.3em] active:scale-95 transition-all shadow-lg border-2 mb-10 ${
-            isDark
-              ? 'bg-slate-900 text-white border-white/10'
-              : 'bg-slate-200 text-slate-800 border-slate-300'
-          }`}
-        >
-          📄 Company Profile
-        </Link>
-      </section>
+</section>
 
-      {/* Address & Footer */}
-      <footer
-        className={`py-16 text-center relative z-10 transition-colors duration-500 ${
-          isDark
-            ? 'bg-slate-950/80 border-t border-white/5'
-            : 'bg-slate-200/80 border-t border-slate-300'
-        }`}
-      >
-        <p
-          className={`text-[10px] font-black uppercase tracking-[0.4em] px-14 mb-10 leading-relaxed ${
-            isDark ? 'text-slate-700' : 'text-slate-500'
-          }`}
-        >
-          {COMPANY_INFO.address}
-        </p>
 
-        <div className="mb-4">
-          <a
-            href="https://sipc.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`text-sm font-black tracking-[0.2em] underline decoration-2 underline-offset-8 transition-colors ${
-              isDark ? 'text-emerald-500' : 'text-slate-800'
-            }`}
-          >
-            HTTPS://SIPC.IN/
-          </a>
-        </div>
-      </footer>
+{/* Address & Footer */}
+<footer className={`py-16 text-center relative z-10 transition-colors duration-500 ${
+  isDark
+    ? 'bg-slate-950/80 border-t border-white/5'
+    : 'bg-slate-200/80 border-t border-slate-300'
+}`}>
 
-      {/* Scroll To Top */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed right-4 bottom-24 z-40 bg-slate-800 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center"
-      >
-        ↑
-      </button>
+  <p className={`text-[10px] font-black uppercase tracking-[0.4em] px-14 mb-10 leading-relaxed ${
+    isDark ? 'text-slate-700' : 'text-slate-500'
+  }`}>
+    {COMPANY_INFO.address}
+  </p>
 
-            <FloatingChat isDark={isDark} />
-    </div>
-  );
+  <div className="mb-4">
+    <a
+      href="https://sipc.in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`text-sm font-black tracking-[0.2em] underline decoration-2 underline-offset-8 ${
+        isDark ? 'text-emerald-500' : 'text-slate-800'
+      }`}
+    >
+      HTTPS://SIPC.IN/
+    </a>
+  </div>
+
+</footer>
+
+
+{/* Scroll To Top */}
+<button
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="fixed right-4 bottom-24 z-40 bg-slate-800 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center"
+>
+  ↑
+</button>
+
+
+{/* WhatsApp Floating Button */}
+<FloatingChat isDark={isDark} />
+
+
+</div>
+);
 };
 
 export default VCard;
