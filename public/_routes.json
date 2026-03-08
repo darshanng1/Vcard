@@ -1,5 +1,12 @@
 {
   "version": 1,
-  "include": ["/blog/*"],
-  "exclude": []
+  "routes": [
+    {
+      "src": "^/blog$",
+      "headers": {
+        "Location": "/blog/"
+      },
+      "status": 301
+    }
+  ]
 }
