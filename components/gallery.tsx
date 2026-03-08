@@ -3,10 +3,16 @@ import React from "react";
 const Gallery = () => {
 
   const images = [
-    "/gallery/bird1.jpg",
-    "/gallery/bird2.jpg",
-    "/gallery/bird3.jpg",
-    "/gallery/bird4.jpg"
+    "/gallery/bird1.jpeg",
+    "/gallery/bird2.jpeg",
+    "/gallery/bird3.jpeg",
+    "/gallery/bird4.jpg",
+    "/gallery/bird5.jpeg",
+    "/gallery/bird6.jpeg",
+    "/gallery/bird7.jpeg",
+    "/gallery/bird8.jpeg",
+    "/gallery/bird9.jpeg",
+    "/gallery/bird10.jpeg"
   ];
 
   return (
@@ -16,7 +22,7 @@ const Gallery = () => {
         INSTALLATION GALLERY
       </h1>
 
-      <div className="grid grid-cols-2 gap-6 max-w-[600px] mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-[900px] mx-auto">
 
         {images.map((img, index) => (
           <img
