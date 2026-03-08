@@ -8,7 +8,6 @@ import ChatModule from './components/ChatModule';
 import PdfModule from './components/PdfModule';
 import UploadModule from './components/UploadModule';
 import ServicePage from './components/ServicePage';
-import Blog from './components/Blog';
 
 import { SERVICES } from './constants';
 
@@ -26,9 +25,6 @@ const App: React.FC = () => {
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
-
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<Blog />} />
 
           {SERVICES.map((s) => (
             <Route
