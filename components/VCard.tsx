@@ -286,6 +286,40 @@ const VCard: React.FC = () => {
 
   </div>
 </section>
+{/* 🎥 Work Videos */}
+<section className="px-10 py-12 z-10">
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 text-center">
+    Live Work Videos
+  </h3>
+
+  <div className="grid grid-cols-1 gap-6 max-w-[400px] mx-auto">
+
+    <iframe
+      className="w-full h-[220px] rounded-2xl shadow-2xl"
+      src="https://www.youtube.com/embed/0XejFwwTwEI"
+      title="Bird Net Installation Bangalore"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+
+    <iframe
+      className="w-full h-[220px] rounded-2xl shadow-2xl"
+      src="https://www.youtube.com/embed/0S9JciPhRAE"
+      title="Pest Control Work Bangalore"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+
+    <iframe
+      className="w-full h-[220px] rounded-2xl shadow-2xl"
+      src="https://www.youtube.com/embed/4ejcWW4HPuU"
+      title="Corporate Pest Control Service"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+
+  </div>
+</section>
 {/* 📰 Blog Section */}
 <section className="px-10 py-10 z-10 flex flex-col items-center">
 
