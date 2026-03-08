@@ -1,12 +1,12 @@
 import React from "react";
 
-import bird1 from "./src/assets/images/Gallery/bird1.jpg";
-import bird2 from "./src/assets/images/Gallery/bird2.jpg";
-import bird3 from "./src/assets/images/Gallery/bird3.jpg";
-
 const Gallery = () => {
 
-  const images = [bird1, bird2, bird3];
+  const images = [
+    "/gallery/bird1.jpg",
+    "/gallery/bird2.jpg",
+    "/gallery/bird3.jpg"
+  ];
 
   return (
     <div className="bg-slate-950 min-h-screen text-white pt-24 pb-20 px-8">
