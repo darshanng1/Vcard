@@ -8,7 +8,7 @@ import ChatModule from './components/ChatModule';
 import PdfModule from './components/PdfModule';
 import UploadModule from './components/UploadModule';
 import ServicePage from './components/ServicePage';
-
+import Gallery from "./components/Gallery";
 import { SERVICES } from './constants';
 
 const App: React.FC = () => {
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Routes>
 
         <Route element={<Layout />}>
-
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/" element={<VCard />} />
           <Route path="/book" element={<Booking />} />
           <Route path="/chat" element={<ChatModule />} />

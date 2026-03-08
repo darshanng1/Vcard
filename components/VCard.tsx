@@ -252,43 +252,35 @@ const VCard: React.FC = () => {
           />
         ))}
       </section>
-      {/* 🖼 Gallery Button */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
+     {/* 📂 Media Hub */}
+<section className="px-10 py-10 z-10 flex flex-col items-center space-y-4">
 
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
-    Installation Gallery
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-4 opacity-60">
+    Media & Updates
   </h3>
 
   <Link
     to="/gallery"
     className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
   >
-    View Installation Photos
+    📷 View Installation Photos
   </Link>
-
-</section>
-{/* 🎥 Videos Section */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
-
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
-    Work Videos
-  </h3>
 
   <Link
     to="/videos"
     className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-slate-900 text-white border-slate-900 hover:bg-slate-800 transition"
   >
-    Watch Work Videos
+    🎥 Watch Work Videos
+  </Link>
+
+  <Link
+    to="/blog"
+    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
+  >
+    📰 View Blog Articles
   </Link>
 
 </section>
-{/* 📰 Blog Section */}
-<section className="px-10 py-10 z-10 flex flex-col items-center">
-
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
-    Latest Blog
-  </h3>
-
   <a
     href="https://darshanngsipcvcard.pages.dev/blog/"
     target="_self"
