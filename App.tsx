@@ -11,6 +11,11 @@ import ServicePage from './components/ServicePage';
 
 import { SERVICES } from './constants';
 
+const BlogRedirect = () => {
+  window.location.href = "/blog/";
+  return null;
+};
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -25,6 +30,9 @@ const App: React.FC = () => {
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
+
+          {/* Redirect React route to static blog */}
+          <Route path="/blog" element={<BlogRedirect />} />
 
           {SERVICES.map((s) => (
             <Route
