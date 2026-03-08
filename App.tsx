@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-
+import Videos from "./components/Videos";
 import Layout from './components/Layout';
 import VCard from './components/VCard';
 import Booking from './components/Booking';
@@ -24,7 +24,7 @@ const App: React.FC = () => {
           <Route path="/rate-card" element={<PdfModule title="Rate Card" />} />
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
-
+          <Route path="/videos" element={<Videos />} />
           {/* Redirect /blog → /blog/ */}
           <Route path="/blog" element={<Navigate to="/blog/" replace />} />
 

@@ -252,73 +252,35 @@ const VCard: React.FC = () => {
           />
         ))}
       </section>
-      {/* 🖼 Bird Net Installation Gallery */}
-<section className="px-10 py-12 z-10">
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 text-center">
-    Recent Bird Net Installations
+      {/* 🖼 Gallery Button */}
+<section className="px-10 py-10 z-10 flex flex-col items-center">
+
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
+    Installation Gallery
   </h3>
 
-  <div className="grid grid-cols-1 gap-6 max-w-[400px] mx-auto">
+  <Link
+    to="/gallery"
+    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 transition"
+  >
+    View Installation Photos
+  </Link>
 
-    <img
-      src={bird1}
-      alt="Balcony Bird Net Installation Bangalore"
-      className="rounded-2xl shadow-2xl w-full object-cover"
-    />
-
-    <img
-      src={bird2}
-      alt="Pigeon Net Installation Bangalore"
-      className="rounded-2xl shadow-2xl w-full object-cover"
-    />
-
-    <img
-      src={bird3}
-      alt="Apartment Bird Net Service Bangalore"
-      className="rounded-2xl shadow-2xl w-full object-cover"
-    />
-
-    <img
-      src={bird4}
-      alt="Residential Bird Net Bangalore"
-      className="rounded-2xl shadow-2xl w-full object-cover"
-    />
-
-  </div>
 </section>
-{/* 🎥 Work Videos */}
-<section className="px-10 py-12 z-10">
-  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60 text-center">
-    Live Work Videos
+{/* 🎥 Videos Section */}
+<section className="px-10 py-10 z-10 flex flex-col items-center">
+
+  <h3 className="text-[11px] font-black uppercase tracking-[0.5em] mb-6 opacity-60">
+    Work Videos
   </h3>
 
-  <div className="grid grid-cols-1 gap-6 max-w-[400px] mx-auto">
+  <Link
+    to="/videos"
+    className="w-full max-w-[400px] flex items-center justify-center py-4 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl border-2 bg-slate-900 text-white border-slate-900 hover:bg-slate-800 transition"
+  >
+    Watch Work Videos
+  </Link>
 
-    <iframe
-      className="w-full h-[220px] rounded-2xl shadow-2xl"
-      src="https://www.youtube.com/embed/0XejFwwTwEI"
-      title="Bird Net Installation Bangalore"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-
-    <iframe
-      className="w-full h-[220px] rounded-2xl shadow-2xl"
-      src="https://www.youtube.com/embed/0S9JciPhRAE"
-      title="Pest Control Work Bangalore"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-
-    <iframe
-      className="w-full h-[220px] rounded-2xl shadow-2xl"
-      src="https://www.youtube.com/embed/4ejcWW4HPuU"
-      title="Corporate Pest Control Service"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-
-  </div>
 </section>
 {/* 📰 Blog Section */}
 <section className="px-10 py-10 z-10 flex flex-col items-center">
