@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Layout from './components/Layout';
 import VCard from './components/VCard';
@@ -11,15 +11,11 @@ import ServicePage from './components/ServicePage';
 
 import { SERVICES } from './constants';
 
-const BlogRedirect = () => {
-  window.location.href = "/blog/";
-  return null;
-};
-
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route element={<Layout />}>
 
           <Route path="/" element={<VCard />} />
@@ -29,8 +25,8 @@ const App: React.FC = () => {
           <Route path="/invoice" element={<PdfModule title="Request Invoice" />} />
           <Route path="/upload" element={<UploadModule />} />
 
-          {/* THIS FIXES YOUR ISSUE */}
-          <Route path="/blog" element={<BlogRedirect />} />
+          {/* Redirect /blog → /blog/ */}
+          <Route path="/blog" element={<Navigate to="/blog/" replace />} />
 
           {SERVICES.map((s) => (
             <Route
@@ -41,6 +37,7 @@ const App: React.FC = () => {
           ))}
 
         </Route>
+
       </Routes>
     </BrowserRouter>
   );
