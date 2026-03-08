@@ -5,7 +5,8 @@ const Gallery = () => {
   const images = [
     "/gallery/bird1.jpg",
     "/gallery/bird2.jpg",
-    "/gallery/bird3.jpg"
+    "/gallery/bird3.jpg",
+    "/gallery/bird4.jpg"
   ];
 
   return (
@@ -15,7 +16,8 @@ const Gallery = () => {
         INSTALLATION GALLERY
       </h1>
 
-      <div className="grid grid-cols-1 gap-6 max-w-[500px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[700px] mx-auto">
+
         {images.map((img, index) => (
           <img
             key={index}
@@ -24,6 +26,7 @@ const Gallery = () => {
             className="rounded-2xl shadow-2xl w-full object-cover"
           />
         ))}
+
       </div>
 
     </div>
