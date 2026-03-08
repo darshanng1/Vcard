@@ -8,7 +8,7 @@ export const CONTACT_INFO: ContactData = {
   phone: "+919686407061",
   whatsapp: "919686407061",
   email: "darshan.ng@sipc.in",
-  bio: "Business Development Manager at Secure India Pest Control Pvt Ltd. Facilitating enterprise-grade pest management and structural bird proofing solutions for corporate and residential clients across Bengaluru."
+  bio: "Business Development Manager at Sequre India Pest Control Pvt Ltd. Facilitating enterprise-grade pest management and structural bird proofing solutions for corporate and residential clients across Bengaluru."
 };
 
 export const COMPANY_INFO = {
